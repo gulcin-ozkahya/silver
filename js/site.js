@@ -65,12 +65,14 @@ function gorselleriKoru(kok) {
 
 /* ---------- Ürün kartı ---------- */
 function urunKarti(urun, sira) {
+  const gorselSayisi = gorselListesi(urun).length;
+
   return `
     <button class="urun" data-sira="${sira}" aria-label="${urun.ad}, detayları gör">
       <div class="urun-gorsel">
         ${kartGorselHtml(urun)}
         ${urun.stok === false ? '<span class="etiket">Tükendi</span>' : ""}
-        ${gorselListesi(urun).length > 1 ? '<span class="foto-sayaci">2 fotoğraf</span>' : ""}
+        ${gorselSayisi > 1 ? `<span class="foto-sayaci">${gorselSayisi} fotoğraf</span>` : ""}
       </div>
       <div class="urun-bilgi">
         <span class="urun-kategori">${KATEGORILER[urun.kategori] || ""}</span>

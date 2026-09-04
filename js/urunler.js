@@ -94,8 +94,9 @@ const URUNLER = [
     kategori: "bileklik",
     fiyat: "",
     gorseller: [
-      // 1. sıra: tam halka fotoğrafı (henüz yok, çekilince buraya)
-      "gorseller/inci-bileklik.jpg",     // 2. sıra: ön detay
+      "gorseller/inci-bileklik.jpg",
+      "gorseller/inci-bileklik-bilekte-yakin.png",
+      "gorseller/inci-bileklik-bilekte-genel.png",
     ],
     aciklama: "Örgü halkaların arasına oturtulmuş üç inci.",
     detay: "1000 ayar gümüş · İnci",
