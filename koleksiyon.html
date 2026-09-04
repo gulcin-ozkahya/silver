@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Koleksiyon · Özkahya Atelier</title>
+<meta name="description" content="Özkahya Atelier koleksiyonu: el yapımı gümüş ve bakır kolye, küpe, yüzük, bileklik ve bilezikler.">
+<link rel="icon" href="gorseller/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/stil.css">
+</head>
+<body>
+
+<!-- ================= ÜST MENÜ ================= -->
+<header class="ust-bar">
+  <div class="kapsayici ust-bar-ic">
+    <a href="index.html" class="logo">
+      <span class="logo-ad">Özkahya Atelier</span>
+      <span class="logo-alt">El Yapımı Gümüş ve Bakır</span>
+    </a>
+
+    <button class="menu-dugmesi" aria-label="Menü" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="menu">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="koleksiyon.html" class="aktif">Koleksiyon</a>
+      <a href="index.html#atolye">Atölye</a>
+      <a href="index.html#bakim">Bakım</a>
+      <a href="index.html#iletisim">İletişim</a>
+      <!-- WhatsApp logosu js/site.js tarafından eklenir -->
+      <a class="buton buton--simge" data-whatsapp="Merhaba, takılarınız hakkında bilgi almak istiyorum."
+         aria-label="WhatsApp'tan yazın" title="WhatsApp'tan yazın"></a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= KOLEKSİYON ================= -->
+<section class="bolum bolum--ince">
+  <div class="kapsayici">
+    <div class="bolum-baslik">
+      <p class="ust-etiket">Koleksiyon</p>
+      <h2>Atölyeden çıkan tüm parçalar</h2>
+      <p>
+        Kategoriye göre süzebilir veya arama yapabilirsiniz. Beğendiğiniz parçaya
+        dokunduğunuzda detayları ve iletişim seçenekleri açılır.
+      </p>
+    </div>
+
+    <div class="arama-kutusu">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" id="arama" placeholder="Ürün ara (örn. ay taşı)" aria-label="Ürün ara">
+    </div>
+
+    <div class="filtreler" id="filtreler"></div>
+
+    <p class="ust-etiket" id="sayac" style="margin-bottom:22px"></p>
+
+    <div class="izgara" id="tumUrunler"></div>
+  </div>
+</section>
+
+<!-- ================= NASIL ALINIR ================= -->
+<section class="bolum" style="background:#f6f2ec">
+  <div class="kapsayici">
+    <div class="bolum-baslik bolum-baslik--orta">
+      <p class="ust-etiket">Nasıl sipariş verilir?</p>
+      <h2>Üç adımda tamamlanır</h2>
+      <p>Sitede henüz online ödeme yok; süreç tamamen mesaj üzerinden yürüyor.</p>
+    </div>
+
+    <div class="kartlar">
+      <div class="kart">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <h3>1 · Yazın</h3>
+        <p>Beğendiğiniz parçanın adını WhatsApp veya e-posta ile bize iletin.</p>
+      </div>
+      <div class="kart">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M5 8l7-5 7 5"/></svg>
+        <h3>2 · Ölçü ve detay</h3>
+        <p>Yüzük ölçüsü, zincir uzunluğu veya taş seçimini birlikte belirleriz.</p>
+      </div>
+      <div class="kart">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M9 7V4h6v3"/></svg>
+        <h3>3 · Hazırlık ve teslim</h3>
+        <p>Hazır parçalar 1–2 gün, özel üretimler 1–2 hafta içinde kargolanır.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:36px">
+      <a class="buton" data-whatsapp="Merhaba, koleksiyondan bir parça hakkında bilgi almak istiyorum.">WhatsApp'tan yazın</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ALT BİLGİ ================= -->
+<footer class="alt-bilgi">
+  <div class="kapsayici alt-bilgi-ic">
+    <div class="logo">
+      <span class="logo-ad">Özkahya Atelier</span>
+      <span class="logo-alt">El Yapımı Gümüş ve Bakır</span>
+    </div>
+    <nav class="alt-menu">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="index.html#atolye">Atölye</a>
+      <a href="index.html#bakim">Bakım</a>
+      <a href="index.html#iletisim">İletişim</a>
+      <a data-baglanti="instagram" href="#" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <p class="telif">© <span id="yil"></span> Özkahya Atelier · Tüm parçalar el yapımıdır.</p>
+  </div>
+</footer>
+
+<!-- ================= ÜRÜN PENCERESİ ================= -->
+<div class="pencere" id="urunPenceresi" role="dialog" aria-modal="true" aria-labelledby="pencereAd">
+  <div class="pencere-ic">
+    <button class="kapat" aria-label="Kapat">✕</button>
+    <div class="pencere-gorsel" id="pencereGorsel"></div>
+    <div class="pencere-yazi">
+      <p class="ust-etiket" id="pencereKategori"></p>
+      <h2 id="pencereAd"></h2>
+      <p class="pencere-fiyat" id="pencereFiyat"></p>
+      <p id="pencereAciklama"></p>
+      <p class="pencere-detay" id="pencereDetay"></p>
+      <p style="font-size:.86rem;color:var(--yazi-soluk)" id="pencereStok"></p>
+      <div class="pencere-dugmeler">
+        <a class="buton" id="pencereWhatsapp" href="#" target="_blank" rel="noopener">WhatsApp'tan bilgi al</a>
+        <a class="buton buton--bos" id="pencereEposta" href="#">E-posta ile sor</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/urunler.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
