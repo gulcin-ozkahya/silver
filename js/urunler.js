@@ -63,7 +63,10 @@ const URUNLER = [
     ad: "Mor Taşlı Bileklik",
     kategori: "bileklik",
     fiyat: "",
-    gorsel: "gorseller/mor-tasli-bileklik.jpg",
+    gorseller: [
+      "gorseller/mor-tasli-bileklik-tam.jpg",
+      "gorseller/mor-tasli-bileklik-tas-yakin.jpg",
+    ],
     aciklama: "İnce örgü kordonların ortasına oturtulmuş oval mor taş.",
     detay: "1000 ayar gümüş · Çengel kapama",
     oneCikan: true,
