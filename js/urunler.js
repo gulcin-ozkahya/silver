@@ -111,10 +111,10 @@ const URUNLER = [
     kategori: "bileklik",
     fiyat: "",
     gorseller: [
-      // 1. sıra: tam halka fotoğrafı (henüz yok, çekilince buraya)
-      "gorseller/boncuk-bileklik.jpg",   // 2. sıra: ön detay
+      "gorseller/boncuk-detayli-bileklik-bilekte.jpg",
+      "gorseller/boncuk-bileklik.jpg",
     ],
-    aciklama: "Örgü zemine serpiştirilmiş minik gümüş toplar.",
+    aciklama: "Bilekte zarif duran örgü zemin üzerinde minik gümüş top detayları.",
     detay: "1000 ayar gümüş",
     oneCikan: true,
     stok: true,
