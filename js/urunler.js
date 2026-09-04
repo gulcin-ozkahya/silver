@@ -149,7 +149,10 @@ const URUNLER = [
     ad: "Geniş Hasır Örgü Bileklik",
     kategori: "bileklik",
     fiyat: "",
-    gorsel: "gorseller/genis-hasir-orgu-bileklik.png",
+    gorseller: [
+      "gorseller/genis-hasir-orgu-bileklik.png",
+      "gorseller/genis-hasir-orgu-bileklik-tam.png",
+    ],
     aciklama: "Yoğun hasır örgü dokusuyla geniş ve belirgin bir bileklik formu.",
     detay: "1000 ayar gümüş · Geniş örgü form",
     oneCikan: true,
