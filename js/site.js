@@ -1,5 +1,5 @@
 /* ============================================================
-   ÖZKAHYA ATELIER — Site davranışları
+   OZKA STUDIO — Site davranışları
    Bu dosyayı düzenlemenize gerek yok.
    Ürünler ve iletişim bilgileri js/urunler.js içindedir.
    ============================================================ */
@@ -47,11 +47,14 @@ function tekGorselHtml(kaynak, ad, tembel = true) {
   return `<img src="${kaynak}" alt="${ad}" ${tembel ? 'loading="lazy"' : ""} data-ad="${ad}">`;
 }
 
-/* Kart görseli: ikinci fotoğraf varsa üzerine gelince yumuşak geçişle görünür */
+/* Kart görseli: birden fazla fotoğraf varsa kart üzerinde sırayla kayar */
 function kartGorselHtml(urun) {
   const liste = gorselListesi(urun);
   if (!liste.length) return yedekGorsel(urun.ad);
-  return liste.slice(0, 2).map((g) => tekGorselHtml(g, urun.ad)).join("");
+  if (liste.length === 1) return tekGorselHtml(liste[0], urun.ad);
+  return `<div class="kart-galeri" data-foto-sayisi="${liste.length}" style="--foto-sayisi:${liste.length}">
+    ${liste.map((g) => tekGorselHtml(g, urun.ad)).join("")}
+  </div>`;
 }
 
 /* Fotoğraf bulunamazsa yerine yedek görseli koy */
@@ -61,6 +64,39 @@ function gorselleriKoru(kok) {
       img.outerHTML = yedekGorsel(img.dataset.ad);
     });
   });
+}
+
+function kartGalerisiniKur(kart) {
+  const galeri = sec(".kart-galeri", kart);
+  const fotoSayisi = Number(galeri?.dataset.fotoSayisi || 0);
+  if (!galeri || fotoSayisi < 2) return;
+
+  let aktifFoto = 0;
+  let zamanlayici = null;
+
+  const fotoGoster = (sira) => {
+    aktifFoto = sira;
+    galeri.style.transform = `translateX(-${(100 / fotoSayisi) * aktifFoto}%)`;
+  };
+
+  const baslat = () => {
+    if (zamanlayici) return;
+    zamanlayici = window.setInterval(() => {
+      fotoGoster((aktifFoto + 1) % fotoSayisi);
+    }, 1350);
+  };
+
+  const durdur = () => {
+    if (zamanlayici) window.clearInterval(zamanlayici);
+    zamanlayici = null;
+    fotoGoster(0);
+  };
+
+  kart.addEventListener("mouseenter", baslat);
+  kart.addEventListener("mouseleave", durdur);
+  kart.addEventListener("focusin", baslat);
+  kart.addEventListener("focusout", durdur);
+  kart.addEventListener("click", durdur);
 }
 
 /* ---------- Ürün kartı ---------- */
@@ -96,9 +132,10 @@ function izgarayaBas(hedef, liste) {
     .map((u) => urunKarti(u, URUNLER.indexOf(u)))
     .join("");
   gorselleriKoru(hedef);
-  secTum(".urun", hedef).forEach((kart) =>
-    kart.addEventListener("click", () => pencereAc(URUNLER[+kart.dataset.sira]))
-  );
+  secTum(".urun", hedef).forEach((kart) => {
+    kartGalerisiniKur(kart);
+    kart.addEventListener("click", () => pencereAc(URUNLER[+kart.dataset.sira]));
+  });
 }
 
 /* Pencerede birden fazla fotoğraf varsa altta küçük kareler çıkar */

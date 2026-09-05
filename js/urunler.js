@@ -1,5 +1,5 @@
 /* ============================================================
-   ÖZKAHYA ATELIER — ÜRÜN LİSTESİ
+   OZKA STUDIO — ÜRÜN LİSTESİ
    ------------------------------------------------------------
    Yeni ürün eklemek için aşağıdaki listeye yeni bir blok ekleyin.
    Bir ürünü siteden kaldırmak için o bloğu silin.
@@ -98,8 +98,8 @@ const URUNLER = [
     fiyat: "",
     gorseller: [
       "gorseller/inci-bileklik.jpg",
-      "gorseller/inci-bileklik-bilekte-yakin-bej.jpg",
-      "gorseller/inci-bileklik-bilekte-genel-bej.jpg",
+      "gorseller/inci-detayli-bileklik-bilekte-yakin-temiz.jpg",
+      "gorseller/inci-detayli-bileklik-bilekte-genel-temiz.jpg",
     ],
     aciklama: "Örgü halkaların arasına oturtulmuş üç inci.",
     detay: "1000 ayar gümüş · İnci",
@@ -247,7 +247,7 @@ const KATEGORILER = {
 const ILETISIM = {
   telefon: "+90 540 456 87 75",
   eposta: "hasibeozkahya@hotmail.com",
-  instagram: "ateliermora",            // @ işareti olmadan
+  instagram: "ozka",                   // @ işareti olmadan
   sehir: "İzmir",
 
   /* WhatsApp butonları açık. Kapatmak isterseniz true yerine false yazın;

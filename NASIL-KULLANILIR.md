@@ -1,4 +1,4 @@
-# Özkahya Atelier — Site Kullanım Kılavuzu
+# Ozka Studio — Site Kullanım Kılavuzu
 
 Bu site tamamen dosyalardan oluşuyor; veritabanı, kurulum veya aylık ücret yok.
 Değişiklik yapmak için sadece **iki dosyaya** dokunmanız yeterli.
@@ -137,7 +137,7 @@ Aynı dosyanın (`js/urunler.js`) **en altındaki** blok:
 const ILETISIM = {
   telefon: "+90 540 456 87 75",
   eposta: "hasibeozkahya@hotmail.com",
-  instagram: "ateliermora",        // @ işareti olmadan
+  instagram: "ozka",               // @ işareti olmadan
   sehir: "İzmir",
   whatsappAktif: true,             // false yaparsanız WhatsApp butonları kaybolur
 };
@@ -150,7 +150,7 @@ da yukarıdaki telefon numarasını kullanır.
 `whatsappAktif: false` yazarsanız üst menüdeki yeşil WhatsApp düğmesi ve
 diğer WhatsApp butonları siteden kalkar; yerlerini e-posta butonu alır.
 
-> Instagram kullanıcı adı (`ateliermora`) örnek olarak duruyor; hesap adı
+> Instagram kullanıcı adı (`ozka`) örnek olarak duruyor; hesap adı
 > farklıysa değiştirmeniz gerekir.
 
 ---

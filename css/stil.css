@@ -291,10 +291,22 @@ p { margin: 0 0 1em; }
   object-fit: cover;
   transition: opacity 0.4s ease;
 }
-/* İkinci fotoğraf: normalde gizli, kartın üzerine gelince görünür */
-.urun-gorsel img + img { opacity: 0; }
-.urun:hover .urun-gorsel img + img,
-.urun:focus-visible .urun-gorsel img + img { opacity: 1; }
+
+.kart-galeri {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  width: calc(100% * var(--foto-sayisi, 1));
+  height: 100%;
+  transform: translateX(0);
+  transition: transform 0.55s ease;
+}
+.urun-gorsel .kart-galeri img {
+  position: static;
+  flex: 0 0 calc(100% / var(--foto-sayisi, 1));
+  width: calc(100% / var(--foto-sayisi, 1));
+  height: 100%;
+}
 
 .foto-sayaci {
   position: absolute;
