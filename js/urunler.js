@@ -41,10 +41,10 @@ const URUNLER = [
     kategori: "bileklik",
     fiyat: "",
     gorseller: [
-      "gorseller/orgu-bileklik-takim.jpg",   // 1. sıra: tam halka
-      "gorseller/orgu-takim-bej.jpg",        // 2. sıra: kolyesiyle takım
+      "gorseller/orgu-bileklik-yeni-tam.jpg",
+      "gorseller/orgu-bileklik-yeni-detay.jpg",
     ],
-    aciklama: "Kolyenin aynı örgüsünden, desenli kapaklı bileklik.",
+    aciklama: "Yuvarlak örgü dokusu ve desenli kapaklarıyla zarif gümüş bileklik.",
     detay: "1000 ayar gümüş · Çengel kapama",
     oneCikan: true,
     stok: true,

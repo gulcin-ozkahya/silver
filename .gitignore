@@ -3,3 +3,7 @@
 *.jpeg
 *.jpg
 *.png
+!gorseller/
+!gorseller/*.jpeg
+!gorseller/*.jpg
+!gorseller/*.png
