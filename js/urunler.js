@@ -10,7 +10,7 @@
      fiyat     : Yazı olarak fiyat. Fiyat göstermek istemezseniz ""
      gorsel    : tek fotoğraf  -> "gorseller/adi.jpg"
      gorseller : birden fazla fotoğraf -> ["gorseller/bir.jpg", "gorseller/iki.jpg"]
-                 İlk fotoğraf kartta görünür; ikinciye fare gelince geçiş yapar.
+                 İlk fotoğraf kartta görünür; fare gelince tüm fotoğraflar sırayla kayar.
                  Pencerede altta küçük kareler çıkar, tıklayarak geçilir.
      aciklama  : Kısa tanıtım yazısı
      detay     : Malzeme / ölçü gibi bilgiler
@@ -134,7 +134,7 @@ const URUNLER = [
     kategori: "bileklik",
     fiyat: "",
     gorseller: [
-      "gorseller/dugum-detayli-bileklik-tam.jpg",
+      "gorseller/dugum-detayli-bileklik-klipsli.png",
       "gorseller/dugum-detayli-bileklik.png",
     ],
     aciklama: "İnce örgü gümüş kordonların ortasında elde örülmüş düğüm formu.",
@@ -186,7 +186,7 @@ const URUNLER = [
     kategori: "bileklik",
     fiyat: "",
     gorseller: [
-      "gorseller/sonsuzluk-dugumlu-bileklik-tam.jpg",
+      "gorseller/sonsuzluk-dugumlu-bileklik-klipsli.png",
       "gorseller/sonsuzluk-dugumlu-bileklik.jpg",
     ],
     aciklama: "Sonsuzluk formunu andıran geniş düğüm detayı, ince örgü kordonlarla tamamlanıyor.",
@@ -199,7 +199,7 @@ const URUNLER = [
     kategori: "bileklik",
     fiyat: "",
     gorseller: [
-      "gorseller/cok-sirali-dugum-bileklik-tam.jpg",
+      "gorseller/cok-sirali-dugum-bileklik-klipsli.png",
       "gorseller/cok-sirali-dugum-bileklik.jpg",
     ],
     aciklama: "Çok sıralı ince örgü kordonların ortasında küçük bir düğüm detayı.",

@@ -47,7 +47,7 @@ function tekGorselHtml(kaynak, ad, tembel = true) {
   return `<img src="${kaynak}" alt="${ad}" ${tembel ? 'loading="lazy"' : ""} data-ad="${ad}">`;
 }
 
-/* Kart görseli: birden fazla fotoğraf varsa kart üzerinde sırayla kayar */
+/* Kart görseli: birden fazla fotoğraf varsa hoverda önce ikinci fotoğraf gösterilir */
 function kartGorselHtml(urun) {
   const liste = gorselListesi(urun);
   if (!liste.length) return yedekGorsel(urun.ad);
@@ -75,15 +75,18 @@ function kartGalerisiniKur(kart) {
   let zamanlayici = null;
 
   const fotoGoster = (sira) => {
-    aktifFoto = sira;
+    aktifFoto = Math.min(Math.max(sira, 0), fotoSayisi - 1);
     galeri.style.transform = `translateX(-${(100 / fotoSayisi) * aktifFoto}%)`;
   };
 
   const baslat = () => {
-    if (zamanlayici) return;
+    fotoGoster(1);
+    if (fotoSayisi === 2 || zamanlayici) return;
+
     zamanlayici = window.setInterval(() => {
-      fotoGoster((aktifFoto + 1) % fotoSayisi);
-    }, 1350);
+      const sonraki = aktifFoto + 1 >= fotoSayisi ? 1 : aktifFoto + 1;
+      fotoGoster(sonraki);
+    }, 1600);
   };
 
   const durdur = () => {
