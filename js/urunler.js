@@ -28,8 +28,8 @@ const URUNLER = [
     kategori: "kolye",
     fiyat: "",
     gorseller: [
-      "gorseller/orgu-kolye.jpg",      // 1. sıra: tam halka
-      "gorseller/orgu-takim.jpg",      // 2. sıra: bilekliğiyle takım
+      "gorseller/orgu-kolye-bej.jpg",      // 1. sıra: tam halka
+      "gorseller/orgu-takim-bej.jpg",      // 2. sıra: bilekliğiyle takım
     ],
     aciklama: "Yuvarlak örgü gümüş kordon, uçlarında desenli silindir kapaklar. Aynı örgüden bileklikle takım oluşturuyor.",
     detay: "1000 ayar gümüş · Çengel kapama",
@@ -42,7 +42,7 @@ const URUNLER = [
     fiyat: "",
     gorseller: [
       "gorseller/orgu-bileklik-takim.jpg",   // 1. sıra: tam halka
-      "gorseller/orgu-takim.jpg",            // 2. sıra: kolyesiyle takım
+      "gorseller/orgu-takim-bej.jpg",        // 2. sıra: kolyesiyle takım
     ],
     aciklama: "Kolyenin aynı örgüsünden, desenli kapaklı bileklik.",
     detay: "1000 ayar gümüş · Çengel kapama",
@@ -98,8 +98,8 @@ const URUNLER = [
     fiyat: "",
     gorseller: [
       "gorseller/inci-bileklik.jpg",
-      "gorseller/inci-bileklik-bilekte-yakin.png",
-      "gorseller/inci-bileklik-bilekte-genel.png",
+      "gorseller/inci-bileklik-bilekte-yakin-bej.jpg",
+      "gorseller/inci-bileklik-bilekte-genel-bej.jpg",
     ],
     aciklama: "Örgü halkaların arasına oturtulmuş üç inci.",
     detay: "1000 ayar gümüş · İnci",
@@ -111,7 +111,7 @@ const URUNLER = [
     kategori: "bileklik",
     fiyat: "",
     gorseller: [
-      "gorseller/boncuk-detayli-bileklik-bilekte.jpg",
+      "gorseller/boncuk-detayli-bileklik-bilekte-bej.jpg",
       "gorseller/boncuk-bileklik.jpg",
     ],
     aciklama: "Bilekte zarif duran örgü zemin üzerinde minik gümüş top detayları.",
@@ -208,7 +208,7 @@ const URUNLER = [
     fiyat: "",
     gorseller: [
       "gorseller/bakir-tel-bilezik.jpg",
-      "gorseller/bakir-tel-bilezik-bilekte.jpg",
+      "gorseller/bakir-tel-bilezik-bilekte-bej.jpg",
     ],
     aciklama: "İnce bakır tellerle örülmüş geniş bilezik; ikinci fotoğrafta bilekte duruşu görülebilir.",
     detay: "Bakır tel · Çok sıralı örgü",
