@@ -9,8 +9,8 @@
      kategori  : "kolye" | "kupe" | "yuzuk" | "bileklik" | "bilezik"
      fiyat     : Yazı olarak fiyat. Fiyat göstermek istemezseniz ""
      gorsel    : tek fotoğraf  -> "gorseller/adi.jpg"
-     gorseller : birden fazla fotoğraf -> ["gorseller/bir.jpg", "gorseller/iki.jpg"]
-                 İlk fotoğraf kartta görünür; fare gelince tüm fotoğraflar sırayla kayar.
+     gorseller : fotoğraf sırası -> [tam ürün, detay, kullanımda]
+                 İlk fotoğraf kartta görünür; fare gelince diğer fotoğraflar sırayla kayar.
                  Pencerede altta küçük kareler çıkar, tıklayarak geçilir.
      aciklama  : Kısa tanıtım yazısı
      detay     : Malzeme / ölçü gibi bilgiler
@@ -28,8 +28,9 @@ const URUNLER = [
     kategori: "kolye",
     fiyat: "",
     gorseller: [
-      "gorseller/orgu-kolye-bej.jpg",      // 1. sıra: tam halka
-      "gorseller/orgu-takim-bej.jpg",      // 2. sıra: bilekliğiyle takım
+      "gorseller/orgu-kolye-bej.jpg",
+      "gorseller/orgu-kolye-detay.jpg",
+      "gorseller/orgu-kolye-takili.jpg",
     ],
     aciklama: "Yuvarlak örgü gümüş kordon, uçlarında desenli silindir kapaklar. Aynı örgüden bileklikle takım oluşturuyor.",
     detay: "1000 ayar gümüş · Çengel kapama",
@@ -43,6 +44,7 @@ const URUNLER = [
     gorseller: [
       "gorseller/orgu-bileklik-yeni-tam.jpg",
       "gorseller/orgu-bileklik-yeni-detay.jpg",
+      "gorseller/orgu-bileklik-kolda.jpg",
     ],
     aciklama: "Yuvarlak örgü dokusu ve desenli kapaklarıyla zarif gümüş bileklik.",
     detay: "1000 ayar gümüş · Çengel kapama",
@@ -53,8 +55,12 @@ const URUNLER = [
     ad: "Mor Taşlı Kolye",
     kategori: "kolye",
     fiyat: "",                                  // fiyatı yazınca kartta görünür
-    gorsel: "gorseller/mor-tasli-kolye.jpg",
-    aciklama: "El örgüsü gümüş kordon, ortasında mor taş; uçları püsküllü.",
+    gorseller: [
+      "gorseller/mor-tasli-kolye.jpg",
+      "gorseller/mor-tasli-bileklik-tas-yakin.jpg",
+      "gorseller/mor-tasli-kolye-takili.jpg",
+    ],
+    aciklama: "El örgüsü gümüş kordon, ortasında mor taş ve uçları püsküllü.",
     detay: "1000 ayar gümüş · Ayarlanabilir uzunluk",
     oneCikan: true,
     stok: true,
@@ -66,6 +72,7 @@ const URUNLER = [
     gorseller: [
       "gorseller/mor-tasli-bileklik-tam.jpg",
       "gorseller/mor-tasli-bileklik-tas-yakin.jpg",
+      "gorseller/mor-tasli-bileklik-kolda.jpg",
     ],
     aciklama: "İnce örgü kordonların ortasına oturtulmuş oval mor taş.",
     detay: "1000 ayar gümüş · Çengel kapama",
@@ -76,8 +83,12 @@ const URUNLER = [
     ad: "Burgu Örgü Bileklik",
     kategori: "bileklik",
     fiyat: "",
-    gorsel: "gorseller/orgu-bileklik-burgu.jpg",
-    aciklama: "Sarmal dokulu, dolgun örgü; tırtıllı uç kapakları ve çengel kapama.",
+    gorseller: [
+      "gorseller/orgu-bileklik-burgu.jpg",
+      "gorseller/orgu-bileklik-burgu-detay.jpg",
+      "gorseller/orgu-bileklik-burgu-kolda.jpg",
+    ],
+    aciklama: "Sarmal dokulu, dolgun örgü, tırtıllı uç kapakları ve çengel kapama.",
     detay: "1000 ayar gümüş",
     oneCikan: true,
     stok: true,
@@ -86,7 +97,11 @@ const URUNLER = [
     ad: "İnce Örgü Bileklik",
     kategori: "bileklik",
     fiyat: "",
-    gorsel: "gorseller/orgu-bileklik-ince.jpg",
+    gorseller: [
+      "gorseller/orgu-bileklik-ince.jpg",
+      "gorseller/orgu-bileklik-ince-detay.jpg",
+      "gorseller/orgu-bileklik-ince-kolda.jpg",
+    ],
     aciklama: "Hafif ve her güne uygun, ince burgulu örgü.",
     detay: "1000 ayar gümüş",
     oneCikan: true,
@@ -97,8 +112,8 @@ const URUNLER = [
     kategori: "bileklik",
     fiyat: "",
     gorseller: [
+      "gorseller/inci-detayli-bileklik-tam.jpg",
       "gorseller/inci-bileklik.jpg",
-      "gorseller/inci-detayli-bileklik-bilekte-yakin-temiz.jpg",
       "gorseller/inci-detayli-bileklik-bilekte-genel-temiz.jpg",
     ],
     aciklama: "Örgü halkaların arasına oturtulmuş üç inci.",
@@ -111,8 +126,9 @@ const URUNLER = [
     kategori: "bileklik",
     fiyat: "",
     gorseller: [
+      "gorseller/boncuk-detayli-bileklik-tam.jpg",
+      "gorseller/boncuk-detayli-bileklik-detay.jpg",
       "gorseller/boncuk-detayli-bileklik-bilekte-bej.jpg",
-      "gorseller/boncuk-bileklik.jpg",
     ],
     aciklama: "Bilekte zarif duran örgü zemin üzerinde minik gümüş top detayları.",
     detay: "1000 ayar gümüş",
@@ -123,8 +139,12 @@ const URUNLER = [
     ad: "Geniş Örgü Bileklik",
     kategori: "bileklik",
     fiyat: "",
-    gorsel: "gorseller/orgu-bileklik-genis.jpg",
-    aciklama: "Kalın hasır örgü; ortada parlak silindir kapama.",
+    gorseller: [
+      "gorseller/genis-orgu-bileklik-tam.jpg",
+      "gorseller/orgu-bileklik-genis.jpg",
+      "gorseller/genis-orgu-bileklik-kolda.jpg",
+    ],
+    aciklama: "Kalın hasır örgü ve ortada parlak silindir kapama.",
     detay: "1000 ayar gümüş",
     oneCikan: true,
     stok: true,
@@ -136,6 +156,7 @@ const URUNLER = [
     gorseller: [
       "gorseller/dugum-detayli-bileklik-klipsli.png",
       "gorseller/dugum-detayli-bileklik.png",
+      "gorseller/dugum-detayli-bileklik-kolda.jpg",
     ],
     aciklama: "İnce örgü gümüş kordonların ortasında elde örülmüş düğüm formu.",
     detay: "1000 ayar gümüş · Örgü düğüm detay",
@@ -149,6 +170,7 @@ const URUNLER = [
     gorseller: [
       "gorseller/tek-inci-bileklik.png",
       "gorseller/tek-inci-bileklik-inci-detay.jpg",
+      "gorseller/tek-inci-bileklik-kolda.jpg",
     ],
     aciklama: "Ortasında tek inci ve örgü yuva bulunan zarif gümüş bileklik.",
     detay: "1000 ayar gümüş · İnci",
@@ -160,8 +182,9 @@ const URUNLER = [
     kategori: "bileklik",
     fiyat: "",
     gorseller: [
-      "gorseller/genis-hasir-orgu-bileklik.png",
       "gorseller/genis-hasir-orgu-bileklik-tam.png",
+      "gorseller/genis-hasir-orgu-bileklik.png",
+      "gorseller/genis-hasir-orgu-bileklik-kolda.jpg",
     ],
     aciklama: "Yoğun hasır örgü dokusuyla geniş ve belirgin bir bileklik formu.",
     detay: "1000 ayar gümüş · Geniş örgü form",
@@ -175,6 +198,7 @@ const URUNLER = [
     gorseller: [
       "gorseller/boncuklu-dalga-bileklik-tam.jpg",
       "gorseller/boncuklu-dalga-bileklik.jpg",
+      "gorseller/boncuklu-dalga-bileklik-kolda.jpg",
     ],
     aciklama: "Dalga formundaki çift örgünün içinde tekrar eden minik gümüş boncuklar.",
     detay: "1000 ayar gümüş · Boncuk detay",
@@ -188,6 +212,7 @@ const URUNLER = [
     gorseller: [
       "gorseller/sonsuzluk-dugumlu-bileklik-klipsli.png",
       "gorseller/sonsuzluk-dugumlu-bileklik.jpg",
+      "gorseller/sonsuzluk-dugumlu-bileklik-kolda.jpg",
     ],
     aciklama: "Sonsuzluk formunu andıran geniş düğüm detayı, ince örgü kordonlarla tamamlanıyor.",
     detay: "1000 ayar gümüş · Düğüm form",
@@ -201,6 +226,7 @@ const URUNLER = [
     gorseller: [
       "gorseller/cok-sirali-dugum-bileklik-klipsli.png",
       "gorseller/cok-sirali-dugum-bileklik.jpg",
+      "gorseller/cok-sirali-dugum-bileklik-kolda.jpg",
     ],
     aciklama: "Çok sıralı ince örgü kordonların ortasında küçük bir düğüm detayı.",
     detay: "1000 ayar gümüş · Çok sıralı örgü",
@@ -211,8 +237,12 @@ const URUNLER = [
     ad: "Sert Bakır Bilezik",
     kategori: "bilezik",
     fiyat: "",
-    gorsel: "gorseller/sert-bakir-bilezik.jpg",
-    aciklama: "Açık uçlu sert bakır form; örgü geçişleri ve el işi yüzey dokusuyla sıcak bir parça.",
+    gorseller: [
+      "gorseller/sert-bakir-bilezik.jpg",
+      "gorseller/sert-bakir-bilezik-detay.jpg",
+      "gorseller/sert-bakir-bilezik-kolda.jpg",
+    ],
+    aciklama: "Açık uçlu sert bakır form, örgü geçişleri ve el işi yüzey dokusuyla sıcak bir parça.",
     detay: "Bakır · Sert açık bilezik form",
     oneCikan: true,
     stok: true,
@@ -223,9 +253,10 @@ const URUNLER = [
     fiyat: "",
     gorseller: [
       "gorseller/bakir-tel-bilezik.jpg",
+      "gorseller/bakir-tel-bilezik-detay.jpg",
       "gorseller/bakir-tel-bilezik-bilekte-bej.jpg",
     ],
-    aciklama: "İnce bakır tellerle örülmüş geniş bilezik; ikinci fotoğrafta bilekte duruşu görülebilir.",
+    aciklama: "İnce bakır tellerle örülmüş geniş bilezik. İkinci fotoğrafta bilekte duruşu görülebilir.",
     detay: "Bakır tel · Çok sıralı örgü",
     oneCikan: true,
     stok: true,

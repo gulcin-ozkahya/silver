@@ -76,7 +76,7 @@ function kartGalerisiniKur(kart) {
 
   const fotoGoster = (sira) => {
     aktifFoto = Math.min(Math.max(sira, 0), fotoSayisi - 1);
-    galeri.style.transform = `translateX(-${(100 / fotoSayisi) * aktifFoto}%)`;
+    galeri.style.transform = `translateX(-${100 * aktifFoto}%)`;
   };
 
   const baslat = () => {
@@ -107,7 +107,7 @@ function urunKarti(urun, sira) {
   const gorselSayisi = gorselListesi(urun).length;
 
   return `
-    <button class="urun" data-sira="${sira}" aria-label="${urun.ad}, detayları gör">
+    <article class="urun" data-sira="${sira}" tabindex="0" role="button" aria-label="${urun.ad}, detayları gör">
       <div class="urun-gorsel">
         ${kartGorselHtml(urun)}
         ${urun.stok === false ? '<span class="etiket">Tükendi</span>' : ""}
@@ -122,7 +122,7 @@ function urunKarti(urun, sira) {
           <span class="urun-detay-link">Detay →</span>
         </div>
       </div>
-    </button>`;
+    </article>`;
 }
 
 function izgarayaBas(hedef, liste) {
@@ -136,8 +136,14 @@ function izgarayaBas(hedef, liste) {
     .join("");
   gorselleriKoru(hedef);
   secTum(".urun", hedef).forEach((kart) => {
+    const kartiAc = () => pencereAc(URUNLER[+kart.dataset.sira]);
     kartGalerisiniKur(kart);
-    kart.addEventListener("click", () => pencereAc(URUNLER[+kart.dataset.sira]));
+    kart.addEventListener("click", kartiAc);
+    kart.addEventListener("keydown", (olay) => {
+      if (olay.key !== "Enter" && olay.key !== " ") return;
+      olay.preventDefault();
+      kartiAc();
+    });
   });
 }
 
@@ -189,7 +195,7 @@ function pencereAc(urun) {
   sec("#pencereAciklama").textContent = urun.aciklama || "";
   sec("#pencereDetay").textContent = urun.detay || "";
   sec("#pencereStok").textContent =
-    urun.stok === false ? "Şu an tükendi; benzeri özel olarak üretilebilir." : "Hazır ve teslime uygun.";
+    urun.stok === false ? "Şu an tükendi. Benzeri özel olarak üretilebilir." : "Hazır ve teslime uygun.";
 
   const mesaj = `Merhaba, "${urun.ad}" hakkında bilgi almak istiyorum.`;
 

@@ -13,6 +13,8 @@
   --vurgu: #8c8577;
   --vurgu-koyu: #6d675b;
   --gumus: #c9ccd1;
+  --foto-zemin: #d6c1a8;
+  --foto-zemin-koyu: #cdb89f;
   --golge: 0 1px 2px rgba(44, 42, 39, 0.04), 0 8px 24px rgba(44, 42, 39, 0.05);
   --golge-yuksek: 0 2px 4px rgba(44, 42, 39, 0.06), 0 18px 44px rgba(44, 42, 39, 0.1);
   --yumusak: 14px;
@@ -262,6 +264,10 @@ p { margin: 0 0 1em; }
 }
 
 .urun {
+  display: block;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
   background: var(--kart);
   border: 1px solid var(--cizgi);
   border-radius: var(--yumusak);
@@ -280,8 +286,9 @@ p { margin: 0 0 1em; }
   position: relative;
   aspect-ratio: 1 / 1;
   /* ürün fotoğraflarının zeminiyle aynı ton: fotoğraf yüklenirken zıplama olmasın */
-  background: linear-gradient(180deg, #d4cbbd, #bdb3a3);
+  background: linear-gradient(180deg, var(--foto-zemin), var(--foto-zemin-koyu));
   overflow: hidden;
+  line-height: 0;
 }
 .urun-gorsel img, .urun-gorsel svg {
   position: absolute;
@@ -296,15 +303,17 @@ p { margin: 0 0 1em; }
   position: absolute;
   inset: 0;
   display: flex;
-  width: calc(100% * var(--foto-sayisi, 1));
+  width: 100%;
   height: 100%;
   transform: translateX(0);
   transition: transform 0.55s ease;
 }
 .urun-gorsel .kart-galeri img {
   position: static;
-  flex: 0 0 calc(100% / var(--foto-sayisi, 1));
-  width: calc(100% / var(--foto-sayisi, 1));
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  max-width: none;
   height: 100%;
 }
 
@@ -314,6 +323,7 @@ p { margin: 0 0 1em; }
   padding: 4px 10px;
   border-radius: 100px;
   background: rgba(255, 255, 255, 0.88);
+  line-height: 1;
   font-size: 0.66rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -468,7 +478,7 @@ p { margin: 0 0 1em; }
 }
 @keyframes yukari { from { opacity: 0; transform: translateY(14px); } }
 
-.pencere-gorsel { background: linear-gradient(180deg, #d4cbbd, #bdb3a3); position: relative; }
+.pencere-gorsel { background: linear-gradient(180deg, var(--foto-zemin), var(--foto-zemin-koyu)); position: relative; }
 .pencere-gorsel img, .pencere-gorsel svg { width: 100%; height: 100%; object-fit: cover; min-height: 320px; }
 
 /* Pencere içindeki küçük fotoğraf kareleri */
