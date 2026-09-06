@@ -1,5 +1,5 @@
 /* ============================================================
-   OZKA STUDIO — Site davranışları
+   OZKAHYA ATELIER — Site davranışları
    Bu dosyayı düzenlemenize gerek yok.
    Ürünler ve iletişim bilgileri js/urunler.js içindedir.
    ============================================================ */
@@ -105,6 +105,7 @@ function kartGalerisiniKur(kart) {
 /* ---------- Ürün kartı ---------- */
 function urunKarti(urun, sira) {
   const gorselSayisi = gorselListesi(urun).length;
+  const fiyatHtml = urun.fiyat ? `<span class="urun-fiyat">${urun.fiyat}</span>` : "";
 
   return `
     <article class="urun" data-sira="${sira}" tabindex="0" role="button" aria-label="${urun.ad}, detayları gör">
@@ -117,8 +118,8 @@ function urunKarti(urun, sira) {
         <span class="urun-kategori">${KATEGORILER[urun.kategori] || ""}</span>
         <h3 class="urun-ad">${urun.ad}</h3>
         <p class="urun-aciklama">${urun.aciklama || ""}</p>
-        <div class="urun-alt">
-          <span class="urun-fiyat">${urun.fiyat || "Fiyat için sorun"}</span>
+        <div class="urun-alt ${urun.fiyat ? "" : "urun-alt--sadece-detay"}">
+          ${fiyatHtml}
           <span class="urun-detay-link">Detay →</span>
         </div>
       </div>
@@ -191,7 +192,11 @@ function pencereAc(urun) {
   pencereGorselleriKur(urun);
   sec("#pencereKategori").textContent = KATEGORILER[urun.kategori] || "";
   sec("#pencereAd").textContent = urun.ad;
-  sec("#pencereFiyat").textContent = urun.fiyat || "Fiyat için bize yazın";
+  const pencereFiyat = sec("#pencereFiyat");
+  if (pencereFiyat) {
+    pencereFiyat.textContent = urun.fiyat || "";
+    pencereFiyat.hidden = !urun.fiyat;
+  }
   sec("#pencereAciklama").textContent = urun.aciklama || "";
   sec("#pencereDetay").textContent = urun.detay || "";
   sec("#pencereStok").textContent =

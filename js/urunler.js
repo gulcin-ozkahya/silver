@@ -1,5 +1,5 @@
 /* ============================================================
-   OZKA STUDIO — ÜRÜN LİSTESİ
+   OZKAHYA ATELIER — ÜRÜN LİSTESİ
    ------------------------------------------------------------
    Yeni ürün eklemek için aşağıdaki listeye yeni bir blok ekleyin.
    Bir ürünü siteden kaldırmak için o bloğu silin.
@@ -7,7 +7,7 @@
    Her ürünün alanları:
      ad        : Ürünün adı
      kategori  : "kolye" | "kupe" | "yuzuk" | "bileklik" | "bilezik"
-     fiyat     : Yazı olarak fiyat. Fiyat göstermek istemezseniz ""
+     fiyat     : Yazı olarak fiyat. Boş bırakırsanız fiyat satırı görünmez.
      gorsel    : tek fotoğraf  -> "gorseller/adi.jpg"
      gorseller : fotoğraf sırası -> [tam ürün, detay, kullanımda]
                  İlk fotoğraf kartta görünür; fare gelince diğer fotoğraflar sırayla kayar.
@@ -19,7 +19,7 @@
 
    NOT: Aşağıdaki ürün adları, açıklamalar ve ölçüler fotoğraflara
    bakılarak yazıldı; annenizle teyit edip düzeltin. Fiyatlar boş
-   bırakıldı, kartta "Fiyat için sorun" yazıyor.
+   bırakıldı, fiyat satırı sitede gösterilmiyor.
    ============================================================ */
 
 const URUNLER = [
@@ -278,7 +278,7 @@ const KATEGORILER = {
 const ILETISIM = {
   telefon: "+90 540 456 87 75",
   eposta: "hasibeozkahya@hotmail.com",
-  instagram: "ozka",                   // @ işareti olmadan
+  instagram: "ozkahya",                // @ işareti olmadan
   sehir: "İzmir",
 
   /* WhatsApp butonları açık. Kapatmak isterseniz true yerine false yazın;

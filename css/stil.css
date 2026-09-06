@@ -362,6 +362,7 @@ p { margin: 0 0 1em; }
   padding-top: 12px;
   border-top: 1px solid var(--cizgi);
 }
+.urun-alt--sadece-detay { justify-content: flex-end; }
 .urun-fiyat { font-size: 0.98rem; letter-spacing: 0.02em; }
 .urun-detay-link { font-size: 0.8rem; color: var(--vurgu); }
 
