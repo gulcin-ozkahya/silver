@@ -1,5 +1,5 @@
 /* ============================================================
-   OZKAHYA ATELIER — ÜRÜN LİSTESİ
+   OZKAHYA STUDIO — ÜRÜN LİSTESİ
    ------------------------------------------------------------
    Yeni ürün eklemek için aşağıdaki listeye yeni bir blok ekleyin.
    Bir ürünü siteden kaldırmak için o bloğu silin.
@@ -80,26 +80,12 @@ const URUNLER = [
     stok: true,
   },
   {
-    ad: "Burgu Örgü Bileklik",
-    kategori: "bileklik",
-    fiyat: "",
-    gorseller: [
-      "gorseller/orgu-bileklik-burgu.jpg",
-      "gorseller/orgu-bileklik-burgu-detay.jpg",
-      "gorseller/orgu-bileklik-burgu-kolda.jpg",
-    ],
-    aciklama: "Sarmal dokulu, dolgun örgü, tırtıllı uç kapakları ve çengel kapama.",
-    detay: "1000 ayar gümüş",
-    oneCikan: true,
-    stok: true,
-  },
-  {
     ad: "İnce Örgü Bileklik",
     kategori: "bileklik",
     fiyat: "",
     gorseller: [
-      "gorseller/orgu-bileklik-ince.jpg",
-      "gorseller/orgu-bileklik-ince-detay.jpg",
+      "gorseller/orgu-bileklik-ince-tam-v2.jpg",
+      "gorseller/orgu-bileklik-ince-detay-v2.jpg",
       "gorseller/orgu-bileklik-ince-kolda.jpg",
     ],
     aciklama: "Hafif ve her güne uygun, ince burgulu örgü.",

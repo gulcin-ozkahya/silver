@@ -1,4 +1,4 @@
-# Ozkahya Atelier — Site Kullanım Kılavuzu
+# Ozkahya Studio — Site Kullanım Kılavuzu
 
 Bu site tamamen dosyalardan oluşuyor; veritabanı, kurulum veya aylık ücret yok.
 Değişiklik yapmak için sadece **iki dosyaya** dokunmanız yeterli.
@@ -177,7 +177,7 @@ Site tek başına çalışan dosyalardan oluştuğu için sunucuya ihtiyaç yok.
 
 Site yapı adımı (build) gerektirmediği için hepsinde ayar yapmadan çalışır.
 
-Kendi alan adınız (`ozkahyaatelier.com` gibi) olsun isterseniz yıllık ücretle
+Kendi alan adınız (`ozkahyastudio.com` gibi) olsun isterseniz yıllık ücretle
 (yaklaşık 10–15 $) alıp bu servislerin hepsine ücretsiz bağlayabilirsiniz.
 
 ---

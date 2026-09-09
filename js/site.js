@@ -1,5 +1,5 @@
 /* ============================================================
-   OZKAHYA ATELIER — Site davranışları
+   OZKAHYA STUDIO — Site davranışları
    Bu dosyayı düzenlemenize gerek yok.
    Ürünler ve iletişim bilgileri js/urunler.js içindedir.
    ============================================================ */
