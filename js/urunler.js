@@ -52,6 +52,20 @@ const URUNLER = [
     stok: true,
   },
   {
+    ad: "Sık Örgü Bileklik",
+    kategori: "bileklik",
+    fiyat: "",
+    gorseller: [
+      "gorseller/sik-orgu-bileklik-tam.jpg",
+      "gorseller/sik-orgu-bileklik-detay.jpg",
+      "gorseller/sik-orgu-bileklik-kolda.jpg",
+    ],
+    aciklama: "Sık dokulu gümüş örgü kordon, desenli silindir kapaklar ve klipsli kapama.",
+    detay: "999 ayar gümüş · El örgüsü · Klipsli kapama",
+    oneCikan: true,
+    stok: true,
+  },
+  {
     ad: "Mor Taşlı Kolye",
     kategori: "kolye",
     fiyat: "",                                  // fiyatı yazınca kartta görünür
@@ -140,9 +154,9 @@ const URUNLER = [
     kategori: "bileklik",
     fiyat: "",
     gorseller: [
-      "gorseller/dugum-detayli-bileklik-klipsli.png",
+      "gorseller/dugum-detayli-bileklik-tam-v2.jpg",
       "gorseller/dugum-detayli-bileklik.png",
-      "gorseller/dugum-detayli-bileklik-kolda.jpg",
+      "gorseller/dugum-detayli-bileklik-kolda-v2.jpg",
     ],
     aciklama: "İnce örgü gümüş kordonların ortasında elde örülmüş düğüm formu.",
     detay: "1000 ayar gümüş · Örgü düğüm detay",
@@ -196,7 +210,7 @@ const URUNLER = [
     kategori: "bileklik",
     fiyat: "",
     gorseller: [
-      "gorseller/sonsuzluk-dugumlu-bileklik-klipsli.png",
+      "gorseller/sonsuzluk-dugumlu-bileklik-dogal-v2.jpg",
       "gorseller/sonsuzluk-dugumlu-bileklik.jpg",
       "gorseller/sonsuzluk-dugumlu-bileklik-kolda.jpg",
     ],
