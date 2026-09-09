@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ozkahya Atelier · El Yapımı Gümüş ve Bakır Takı</title>
-<meta name="description" content="Ozkahya Atelier: gümüş ve bakırdan, tek tek el emeğiyle üretilen kolye, küpe, yüzük, bileklik ve bilezikler.">
-<link rel="icon" href="gorseller/favicon.svg" type="image/svg+xml">
+<title>Ozkahya Studio · El Yapımı Gümüş ve Bakır Takı</title>
+<meta name="description" content="Ozkahya Studio: gümüş ve bakırdan, tek tek el emeğiyle üretilen kolye, küpe, yüzük, bileklik ve bilezikler.">
+<link rel="icon" href="gorseller/favicon.svg?v=rafine-1" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -16,9 +16,12 @@
 <!-- ================= ÜST MENÜ ================= -->
 <header class="ust-bar">
   <div class="kapsayici ust-bar-ic">
-    <a href="index.html" class="logo">
-      <span class="logo-ad">Ozkahya Atelier</span>
-      <span class="logo-alt">El Yapımı Gümüş ve Bakır</span>
+    <a href="index.html" class="logo logo--marka" aria-label="Ozkahya Studio ana sayfa">
+      <img src="gorseller/logo-alternatifleri/ozkahya-studio-01-rafine.svg" alt="" width="42" height="42">
+      <span class="logo-metin">
+        <span class="logo-ad">Ozkahya Studio</span>
+        <span class="logo-alt">El Yapımı Gümüş ve Bakır</span>
+      </span>
     </a>
 
     <button class="menu-dugmesi" aria-label="Menü" aria-expanded="false">
@@ -41,11 +44,11 @@
 <!-- ================= VİTRİN ================= -->
 <section class="vitrin">
   <div class="kapsayici vitrin-ic">
-    <div>
+    <div class="vitrin-metin">
       <p class="ust-etiket">Gümüş ve Bakır · Tek Tek El İşi</p>
       <h1>Elde şekillenen<br>sessiz bir zarafet</h1>
       <p class="vitrin-yazi">
-        Ozkahya Atelier'deki her parça, küçük bir atölyede tek bir çift elden çıkıyor.
+        Ozkahya Studio'daki her parça, küçük bir atölyede tek bir çift elden çıkıyor.
         Kalıp yok, seri üretim yok. Sadece gümüş teller, sabır ve zaman.
       </p>
       <div class="vitrin-dugmeler">
@@ -69,23 +72,19 @@
       </div>
     </div>
 
-    <div class="vitrin-gorsel">
-      <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="El yapımı gümüş ve bakır takı çizimi">
-        <defs>
-          <linearGradient id="vm" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#eef0f2"/><stop offset="0.5" stop-color="#bcc0c5"/><stop offset="1" stop-color="#8d9196"/>
-          </linearGradient>
-        </defs>
-        <g fill="none" stroke="url(#vm)" stroke-width="3" stroke-linecap="round">
-          <path d="M96 96 Q200 250 304 96"/>
-          <circle cx="200" cy="238" r="10"/>
-          <path d="M200 258 c30 26 40 52 40 70 a40 40 0 0 1 -80 0 c0 -18 10 -44 40 -70z" fill="#dcdee2" stroke-width="2.5"/>
-          <path d="M186 316 a18 18 0 0 1 14 -20" stroke="#fff" stroke-width="2.5" opacity="0.85"/>
-          <circle cx="200" cy="418" r="38" stroke-width="8" stroke="#c6c9ce"/>
-          <circle cx="200" cy="418" r="46" stroke-width="1.2" opacity="0.4"/>
-        </g>
-      </svg>
-    </div>
+    <figure class="vitrin-gorsel">
+      <div class="vitrin-fotograf">
+        <img src="gorseller/orgu-kolye-takili.jpg" alt="Boyunda el örgüsü gümüş kolye">
+      </div>
+      <figcaption class="vitrin-kunye">
+        <span class="vitrin-sira">01</span>
+        <span>
+          <small>Atölyeden seçki</small>
+          <strong>El örgüsü gümüş kolye</strong>
+        </span>
+        <span class="vitrin-malzeme">Gümüş · El işi</span>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -108,28 +107,22 @@
 <!-- ================= ATÖLYE / HAKKINDA ================= -->
 <section class="bolum hakkinda" id="atolye">
   <div class="kapsayici hakkinda-ic">
-    <div class="hakkinda-gorsel">
-      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Atölye çizimi">
-        <rect width="400" height="400" fill="none"/>
-        <g fill="none" stroke="#a9a294" stroke-width="2.6" stroke-linecap="round">
-          <path d="M70 300 h260"/>
-          <path d="M120 300 v-40 h60 v40" />
-          <circle cx="150" cy="228" r="26"/>
-          <path d="M150 202 v-30"/>
-          <path d="M228 300 l58 -58"/>
-          <path d="M282 238 l26 -26 a14 14 0 0 1 20 20 l-26 26z" fill="#dcdee2"/>
-          <path d="M232 296 l-14 14"/>
-          <circle cx="252" cy="176" r="8"/>
-          <circle cx="286" cy="150" r="5"/>
-        </g>
-      </svg>
+    <div class="hakkinda-gorsel" aria-label="Elde örülmüş gümüş bileklikler ve tel detayları">
+      <figure class="atolye-fotograf atolye-fotograf--ana">
+        <img src="gorseller/genis-orgu-bileklik-tam.jpg" alt="Geniş örgülü gümüş bilekliğin tamamı ve silindir kapaması">
+        <figcaption>Tel tel, elde örülür</figcaption>
+      </figure>
+      <figure class="atolye-fotograf atolye-fotograf--detay">
+        <img src="gorseller/orgu-bileklik-yeni-detay.jpg" alt="Gümüş tel örgünün yakın plan detayı">
+      </figure>
+      <span class="atolye-isaret" aria-hidden="true">01 — 03</span>
     </div>
 
     <div>
       <p class="ust-etiket">Atölye</p>
       <h2>Bir masa, incecik teller, çok fazla sabır</h2>
       <p>
-        Ozkahya Atelier, İzmir'de bir ev atölyesinde kuruldu. Her tasarım kağıt üzerinde bir
+        Ozkahya Studio, İzmir'de bir ev atölyesinde kuruldu. Her tasarım kağıt üzerinde bir
         çizim olarak başlıyor. Sonra gümüş ve bakır teller elde bükülüyor, örülüyor, lehimleniyor
         ve tek tek parlatılıyor. Bu yüzden hiçbir parça diğerinin tam kopyası değil.
         yüzeydeki her küçük iz elle yapıldığının işareti.
@@ -239,9 +232,12 @@
 <!-- ================= ALT BİLGİ ================= -->
 <footer class="alt-bilgi">
   <div class="kapsayici alt-bilgi-ic">
-    <div class="logo">
-      <span class="logo-ad">Ozkahya Atelier</span>
-      <span class="logo-alt">El Yapımı Gümüş ve Bakır</span>
+    <div class="logo logo--marka" aria-label="Ozkahya Studio">
+      <img src="gorseller/logo-alternatifleri/ozkahya-studio-01-rafine.svg" alt="" width="42" height="42">
+      <span class="logo-metin">
+        <span class="logo-ad">Ozkahya Studio</span>
+        <span class="logo-alt">El Yapımı Gümüş ve Bakır</span>
+      </span>
     </div>
     <nav class="alt-menu">
       <a href="koleksiyon.html">Koleksiyon</a>
@@ -250,7 +246,7 @@
       <a href="#iletisim">İletişim</a>
       <a data-baglanti="instagram" href="#" target="_blank" rel="noopener">Instagram</a>
     </nav>
-    <p class="telif">© <span id="yil"></span> Ozkahya Atelier · Tüm parçalar el yapımıdır.</p>
+    <p class="telif">© <span id="yil"></span> Ozkahya Studio · Tüm parçalar el yapımıdır.</p>
   </div>
 </footer>
 

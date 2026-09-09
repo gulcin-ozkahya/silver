@@ -1,5 +1,5 @@
 /* ============================================================
-   OZKAHYA ATELIER — ÜRÜN LİSTESİ
+   OZKAHYA STUDIO — ÜRÜN LİSTESİ
    ------------------------------------------------------------
    Yeni ürün eklemek için aşağıdaki listeye yeni bir blok ekleyin.
    Bir ürünü siteden kaldırmak için o bloğu silin.
