@@ -56,7 +56,7 @@ const URUNLER = [
     kategori: "kolye",
     fiyat: "",                                  // fiyatı yazınca kartta görünür
     gorseller: [
-      "gorseller/mor-tasli-kolye.jpg",
+      "gorseller/mor-tasli-kolye-tam-v2.jpg",
       "gorseller/mor-tasli-bileklik-tas-yakin.jpg",
       "gorseller/mor-tasli-kolye-takili.jpg",
     ],

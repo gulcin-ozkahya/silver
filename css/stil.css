@@ -479,16 +479,27 @@ p { margin: 0 0 1em; }
 }
 @keyframes yukari { from { opacity: 0; transform: translateY(14px); } }
 
-.pencere-gorsel { background: linear-gradient(180deg, var(--foto-zemin), var(--foto-zemin-koyu)); position: relative; }
-.pencere-gorsel img, .pencere-gorsel svg { width: 100%; height: 100%; object-fit: cover; min-height: 320px; }
+.pencere-gorsel {
+  background: var(--foto-zemin);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+.pencere-gorsel > img, .pencere-gorsel > svg {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
 
 /* Pencere içindeki küçük fotoğraf kareleri */
 .pencere-kucukler {
-  position: absolute;
-  left: 0; right: 0; bottom: 14px;
   display: flex;
   gap: 8px;
   justify-content: center;
+  flex-shrink: 0;
+  padding: 14px 0;
 }
 .pencere-kucukler button {
   width: 54px; height: 54px;
@@ -500,7 +511,7 @@ p { margin: 0 0 1em; }
   cursor: pointer;
   transition: var(--gecis);
 }
-.pencere-kucukler button img { min-height: 0; }
+.pencere-kucukler button img { width: 100%; height: 100%; object-fit: cover; }
 .pencere-kucukler button:hover { border-color: #fff; }
 .pencere-kucukler button.aktif { border-color: var(--yazi); }
 .pencere-yazi { padding: 40px 36px; }
@@ -557,7 +568,7 @@ p { margin: 0 0 1em; }
   .hakkinda-gorsel { max-width: 380px; }
   .pencere-ic { grid-template-columns: 1fr; }
   /* Kısa ekranlarda fotoğraf pencereyi kaplamasın */
-  .pencere-gorsel img, .pencere-gorsel svg { min-height: 0; height: min(300px, 34vh); }
+  .pencere-gorsel > img, .pencere-gorsel > svg { height: min(300px, 34vh); }
   .pencere-yazi { padding: 28px 24px 32px; }
 
   .menu-dugmesi { display: block; }
