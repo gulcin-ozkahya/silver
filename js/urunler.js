@@ -28,7 +28,7 @@ const URUNLER = [
     kategori: "kolye",
     fiyat: "",
     gorseller: [
-      "gorseller/orgu-kolye-bej.jpg",
+      "gorseller/orgu-kolye-dogal-v2.jpg",
       "gorseller/orgu-kolye-detay.jpg",
       "gorseller/orgu-kolye-takili.jpg",
     ],
@@ -70,7 +70,7 @@ const URUNLER = [
     kategori: "bileklik",
     fiyat: "",
     gorseller: [
-      "gorseller/mor-tasli-bileklik-tam.jpg",
+      "gorseller/mor-tasli-bileklik-dogal-v2.jpg",
       "gorseller/mor-tasli-bileklik-tas-yakin.jpg",
       "gorseller/mor-tasli-bileklik-kolda.jpg",
     ],
