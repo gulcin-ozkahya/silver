@@ -151,7 +151,7 @@ const URUNLER = [
     shopier: "",
     gorseller: [
       "gorseller/genis-orgu-bileklik-tam.jpg",
-      "gorseller/orgu-bileklik-genis.jpg",
+      "gorseller/genis-orgu-bileklik-detay-v2.png",
       "gorseller/genis-orgu-bileklik-kolda.jpg",
     ],
     aciklama: "Kalın hasır örgü ve ortada parlak silindir kapama.",
