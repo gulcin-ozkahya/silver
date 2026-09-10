@@ -193,7 +193,7 @@ const URUNLER = [
     ad: "Geniş Hasır Örgü Bileklik",
     kategori: "bileklik",
     fiyat: "",
-    shopier: "",
+    shopier: "https://www.shopier.com/ozkahyastudio/50715995",
     gorseller: [
       "gorseller/genis-hasir-orgu-bileklik-tam.png",
       "gorseller/genis-hasir-orgu-bileklik.png",
