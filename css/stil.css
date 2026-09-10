@@ -146,6 +146,23 @@ p { margin: 0 0 1em; }
   flex-direction: column;
   transform: translateY(1px);
 }
+.logo--marka.logo--yazi {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+.logo--marka.logo--yazi > img {
+  width: 260px;
+  max-width: 62vw;
+  height: auto;
+}
+.logo--yazi .logo-alt {
+  align-self: center;
+}
+.ust-bar .logo--marka.logo--yazi > img {
+  width: 220px;
+  max-width: 56vw;
+}
 .logo-ad {
   font-family: var(--serif);
   font-size: 1.36rem;
