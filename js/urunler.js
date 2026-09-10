@@ -8,6 +8,7 @@
      ad        : Ürünün adı
      kategori  : "kolye" | "kupe" | "yuzuk" | "bileklik" | "bilezik"
      fiyat     : Yazı olarak fiyat. Boş bırakırsanız fiyat satırı görünmez.
+     shopier   : Ürünün Shopier satış sayfası. Boşsa satın alma düğmesi görünmez.
      gorsel    : tek fotoğraf  -> "gorseller/adi.jpg"
      gorseller : fotoğraf sırası -> [tam ürün, detay, kullanımda]
                  İlk fotoğraf kartta görünür; fare gelince diğer fotoğraflar sırayla kayar.
@@ -27,6 +28,7 @@ const URUNLER = [
     ad: "Örgü Kolye",
     kategori: "kolye",
     fiyat: "",
+    shopier: "https://www.shopier.com/ozkahyastudio/50697128",
     gorseller: [
       "gorseller/orgu-kolye-dogal-v2.jpg",
       "gorseller/orgu-kolye-detay.jpg",
@@ -41,6 +43,7 @@ const URUNLER = [
     ad: "Örgü Bileklik",
     kategori: "bileklik",
     fiyat: "",
+    shopier: "https://www.shopier.com/ozkahyastudio/50654083",
     gorseller: [
       "gorseller/orgu-bileklik-yeni-tam.jpg",
       "gorseller/orgu-bileklik-yeni-detay.jpg",
@@ -52,9 +55,25 @@ const URUNLER = [
     stok: true,
   },
   {
+    ad: "Sık Örgü Bileklik",
+    kategori: "bileklik",
+    fiyat: "",
+    shopier: "",
+    gorseller: [
+      "gorseller/sik-orgu-bileklik-tam.jpg",
+      "gorseller/sik-orgu-bileklik-detay.jpg",
+      "gorseller/sik-orgu-bileklik-kolda.jpg",
+    ],
+    aciklama: "Sık dokulu gümüş örgü kordon, desenli silindir kapaklar ve klipsli kapama.",
+    detay: "999 ayar gümüş · El örgüsü · Klipsli kapama",
+    oneCikan: true,
+    stok: true,
+  },
+  {
     ad: "Mor Taşlı Kolye",
     kategori: "kolye",
     fiyat: "",                                  // fiyatı yazınca kartta görünür
+    shopier: "https://www.shopier.com/ozkahyastudio/50654026",
     gorseller: [
       "gorseller/mor-tasli-kolye-tam-v2.jpg",
       "gorseller/mor-tasli-bileklik-tas-yakin.jpg",
@@ -69,6 +88,7 @@ const URUNLER = [
     ad: "Mor Taşlı Bileklik",
     kategori: "bileklik",
     fiyat: "",
+    shopier: "https://www.shopier.com/ozkahyastudio/50696994",
     gorseller: [
       "gorseller/mor-tasli-bileklik-dogal-v2.jpg",
       "gorseller/mor-tasli-bileklik-tas-yakin.jpg",
@@ -80,26 +100,13 @@ const URUNLER = [
     stok: true,
   },
   {
-    ad: "Burgu Örgü Bileklik",
-    kategori: "bileklik",
-    fiyat: "",
-    gorseller: [
-      "gorseller/orgu-bileklik-burgu.jpg",
-      "gorseller/orgu-bileklik-burgu-detay.jpg",
-      "gorseller/orgu-bileklik-burgu-kolda.jpg",
-    ],
-    aciklama: "Sarmal dokulu, dolgun örgü, tırtıllı uç kapakları ve çengel kapama.",
-    detay: "1000 ayar gümüş",
-    oneCikan: true,
-    stok: true,
-  },
-  {
     ad: "İnce Örgü Bileklik",
     kategori: "bileklik",
     fiyat: "",
+    shopier: "https://www.shopier.com/ozkahyastudio/50654176",
     gorseller: [
-      "gorseller/orgu-bileklik-ince.jpg",
-      "gorseller/orgu-bileklik-ince-detay.jpg",
+      "gorseller/orgu-bileklik-ince-tam-v2.jpg",
+      "gorseller/orgu-bileklik-ince-detay-v2.jpg",
       "gorseller/orgu-bileklik-ince-kolda.jpg",
     ],
     aciklama: "Hafif ve her güne uygun, ince burgulu örgü.",
@@ -111,6 +118,7 @@ const URUNLER = [
     ad: "İnci Detaylı Bileklik",
     kategori: "bileklik",
     fiyat: "",
+    shopier: "https://www.shopier.com/ozkahyastudio/50654114",
     gorseller: [
       "gorseller/inci-detayli-bileklik-tam.jpg",
       "gorseller/inci-bileklik.jpg",
@@ -125,6 +133,7 @@ const URUNLER = [
     ad: "Boncuk Detaylı Bileklik",
     kategori: "bileklik",
     fiyat: "",
+    shopier: "",
     gorseller: [
       "gorseller/boncuk-detayli-bileklik-tam.jpg",
       "gorseller/boncuk-detayli-bileklik-detay.jpg",
@@ -139,9 +148,10 @@ const URUNLER = [
     ad: "Geniş Örgü Bileklik",
     kategori: "bileklik",
     fiyat: "",
+    shopier: "https://www.shopier.com/ozkahyastudio/50715995",
     gorseller: [
       "gorseller/genis-orgu-bileklik-tam.jpg",
-      "gorseller/orgu-bileklik-genis.jpg",
+      "gorseller/genis-orgu-bileklik-detay-v2.png",
       "gorseller/genis-orgu-bileklik-kolda.jpg",
     ],
     aciklama: "Kalın hasır örgü ve ortada parlak silindir kapama.",
@@ -153,10 +163,11 @@ const URUNLER = [
     ad: "Düğüm Detaylı Bileklik",
     kategori: "bileklik",
     fiyat: "",
+    shopier: "https://www.shopier.com/ozkahyastudio/50704360",
     gorseller: [
-      "gorseller/dugum-detayli-bileklik-klipsli.png",
+      "gorseller/dugum-detayli-bileklik-tam-v2.jpg",
       "gorseller/dugum-detayli-bileklik.png",
-      "gorseller/dugum-detayli-bileklik-kolda.jpg",
+      "gorseller/dugum-detayli-bileklik-kolda-v2.jpg",
     ],
     aciklama: "İnce örgü gümüş kordonların ortasında elde örülmüş düğüm formu.",
     detay: "1000 ayar gümüş · Örgü düğüm detay",
@@ -167,6 +178,7 @@ const URUNLER = [
     ad: "Tek İnci Bileklik",
     kategori: "bileklik",
     fiyat: "",
+    shopier: "https://www.shopier.com/ozkahyastudio/50696866",
     gorseller: [
       "gorseller/tek-inci-bileklik.png",
       "gorseller/tek-inci-bileklik-inci-detay.jpg",
@@ -181,6 +193,7 @@ const URUNLER = [
     ad: "Geniş Hasır Örgü Bileklik",
     kategori: "bileklik",
     fiyat: "",
+    shopier: "",
     gorseller: [
       "gorseller/genis-hasir-orgu-bileklik-tam.png",
       "gorseller/genis-hasir-orgu-bileklik.png",
@@ -195,6 +208,7 @@ const URUNLER = [
     ad: "Boncuklu Dalga Bileklik",
     kategori: "bileklik",
     fiyat: "",
+    shopier: "",
     gorseller: [
       "gorseller/boncuklu-dalga-bileklik-tam.jpg",
       "gorseller/boncuklu-dalga-bileklik.jpg",
@@ -209,8 +223,9 @@ const URUNLER = [
     ad: "Sonsuzluk Düğümlü Bileklik",
     kategori: "bileklik",
     fiyat: "",
+    shopier: "https://www.shopier.com/ozkahyastudio/50704004",
     gorseller: [
-      "gorseller/sonsuzluk-dugumlu-bileklik-klipsli.png",
+      "gorseller/sonsuzluk-dugumlu-bileklik-dogal-v2.jpg",
       "gorseller/sonsuzluk-dugumlu-bileklik.jpg",
       "gorseller/sonsuzluk-dugumlu-bileklik-kolda.jpg",
     ],
@@ -223,6 +238,7 @@ const URUNLER = [
     ad: "Çok Sıralı Düğüm Bileklik",
     kategori: "bileklik",
     fiyat: "",
+    shopier: "",
     gorseller: [
       "gorseller/cok-sirali-dugum-bileklik-klipsli.png",
       "gorseller/cok-sirali-dugum-bileklik.jpg",
@@ -237,6 +253,7 @@ const URUNLER = [
     ad: "Sert Bakır Bilezik",
     kategori: "bilezik",
     fiyat: "",
+    shopier: "https://www.shopier.com/ozkahyastudio/50697059",
     gorseller: [
       "gorseller/sert-bakir-bilezik.jpg",
       "gorseller/sert-bakir-bilezik-detay.jpg",
@@ -251,6 +268,7 @@ const URUNLER = [
     ad: "Bakır Tel Bilezik",
     kategori: "bilezik",
     fiyat: "",
+    shopier: "",
     gorseller: [
       "gorseller/bakir-tel-bilezik.jpg",
       "gorseller/bakir-tel-bilezik-detay.jpg",
@@ -280,6 +298,7 @@ const ILETISIM = {
   eposta: "hasibeozkahya@hotmail.com",
   instagram: "ozkahya",                // @ işareti olmadan
   sehir: "İzmir",
+  shopierMagaza: "https://www.shopier.com/ozkahyastudio",
 
   /* WhatsApp butonları açık. Kapatmak isterseniz true yerine false yazın;
      sitedeki tüm WhatsApp butonları kaybolur, e-posta butonu öne geçer. */
