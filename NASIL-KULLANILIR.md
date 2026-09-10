@@ -29,6 +29,7 @@ Listedeki bir bloğu kopyalayıp yapıştırın ve bilgilerini değiştirin:
     ad: "Yeni Kolye",
     kategori: "kolye",              // kolye | kupe | yuzuk | bileklik | bilezik
     fiyat: "1.200 ₺",               // boş bırakırsanız fiyat satırı görünmez
+    shopier: "https://www.shopier.com/ozkahyastudio/12345678",
     gorsel: "gorseller/yeni-kolye.jpg",
     aciklama: "Kısa tanıtım yazısı.",
     detay: "1000 ayar gümüş · 45 cm zincir",
@@ -139,6 +140,7 @@ const ILETISIM = {
   eposta: "hasibeozkahya@hotmail.com",
   instagram: "ozkahya",            // @ işareti olmadan
   sehir: "İzmir",
+  shopierMagaza: "https://www.shopier.com/ozkahyastudio",
   whatsappAktif: true,             // false yaparsanız WhatsApp butonları kaybolur
 };
 ```
@@ -196,8 +198,12 @@ silver/
 
 ---
 
-## İleride online satış
+## Shopier satış bağlantıları
 
-Şu an sipariş WhatsApp / e-posta üzerinden ilerliyor. İleride sepet ve
-kredi kartı ödemesi istenirse mevcut ürün listesi olduğu gibi korunabilir;
-üzerine ödeme altyapısı (Shopify, iyzico, Stripe) eklenir.
+Her ürünün `shopier:` alanına Shopier'deki doğrudan ürün bağlantısını yazın.
+Bağlantı doluysa kartta ve ürün penceresinde `Shopier'de satın al` düğmesi
+görünür. Ürün Shopier'de henüz listelenmediyse alanı boş bırakın; böylece
+ziyaretçi yanlış bir satış sayfasına yönlendirilmez.
+
+Site üzerinde sepet, ödeme formu veya IBAN bulunmaz. Sipariş ve ödeme Shopier'de
+tamamlanır; WhatsApp yalnızca ürün ve özel üretim hakkında bilgi almak içindir.

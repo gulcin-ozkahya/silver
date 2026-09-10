@@ -106,6 +106,10 @@ function kartGalerisiniKur(kart) {
 function urunKarti(urun, sira) {
   const gorselSayisi = gorselListesi(urun).length;
   const fiyatHtml = urun.fiyat ? `<span class="urun-fiyat">${urun.fiyat}</span>` : "";
+  const shopierHtml = urun.shopier
+    ? `<a class="urun-shopier-link" href="${urun.shopier}" target="_blank" rel="noopener"
+          aria-label="${urun.ad} ürününü Shopier'de satın al">Shopier'de satın al →</a>`
+    : "";
 
   return `
     <article class="urun" data-sira="${sira}" tabindex="0" role="button" aria-label="${urun.ad}, detayları gör">
@@ -118,8 +122,9 @@ function urunKarti(urun, sira) {
         <span class="urun-kategori">${KATEGORILER[urun.kategori] || ""}</span>
         <h3 class="urun-ad">${urun.ad}</h3>
         <p class="urun-aciklama">${urun.aciklama || ""}</p>
-        <div class="urun-alt ${urun.fiyat ? "" : "urun-alt--sadece-detay"}">
+        <div class="urun-alt ${urun.fiyat || urun.shopier ? "" : "urun-alt--sadece-detay"}">
           ${fiyatHtml}
+          ${shopierHtml}
           <span class="urun-detay-link">Detay →</span>
         </div>
       </div>
@@ -139,8 +144,12 @@ function izgarayaBas(hedef, liste) {
   secTum(".urun", hedef).forEach((kart) => {
     const kartiAc = () => pencereAc(URUNLER[+kart.dataset.sira]);
     kartGalerisiniKur(kart);
-    kart.addEventListener("click", kartiAc);
+    kart.addEventListener("click", (olay) => {
+      if (olay.target.closest("a")) return;
+      kartiAc();
+    });
     kart.addEventListener("keydown", (olay) => {
+      if (olay.target.closest("a")) return;
       if (olay.key !== "Enter" && olay.key !== " ") return;
       olay.preventDefault();
       kartiAc();
@@ -199,8 +208,18 @@ function pencereAc(urun) {
   }
   sec("#pencereAciklama").textContent = urun.aciklama || "";
   sec("#pencereDetay").textContent = urun.detay || "";
-  sec("#pencereStok").textContent =
-    urun.stok === false ? "Şu an tükendi. Benzeri özel olarak üretilebilir." : "Hazır ve teslime uygun.";
+  sec("#pencereStok").textContent = urun.stok === false
+    ? "Şu an tükendi. Benzeri özel olarak üretilebilir."
+    : urun.shopier
+      ? "Sipariş ve ödeme Shopier üzerinden tamamlanır."
+      : "Bu parça Shopier'de henüz listelenmedi. Ürün hakkında bilgi alabilirsiniz.";
+
+  const shopierDugme = sec("#pencereShopier");
+  if (shopierDugme) {
+    shopierDugme.hidden = !urun.shopier || urun.stok === false;
+    shopierDugme.href = urun.shopier || ILETISIM.shopierMagaza;
+    shopierDugme.setAttribute("aria-label", `${urun.ad} ürününü Shopier'de satın al`);
+  }
 
   const mesaj = `Merhaba, "${urun.ad}" hakkında bilgi almak istiyorum.`;
 
@@ -278,7 +297,7 @@ function koleksiyonuKur() {
 
 /* ---------- İletişim bilgilerini sayfaya yaz ----------
    data-iletisim="telefon|eposta|instagram|sehir"  → yazıyı yazar
-   data-baglanti="telefon|eposta|instagram"        → bağlantıyı (href) kurar
+   data-baglanti="telefon|whatsapp|eposta|instagram" → bağlantıyı (href) kurar
    data-whatsapp="mesaj"                           → hazır mesajlı WhatsApp bağlantısı
 ------------------------------------------------------- */
 const ILETISIM_YAZI = {
@@ -290,6 +309,7 @@ const ILETISIM_YAZI = {
 
 const ILETISIM_BAGLANTI = {
   telefon: () => `tel:+${waNumara()}`,
+  whatsapp: () => waLink("Merhaba, bir ürün hakkında bilgi almak istiyorum."),
   eposta: () => `mailto:${ILETISIM.eposta}`,
   instagram: () => `https://instagram.com/${ILETISIM.instagram}`,
 };
@@ -316,7 +336,7 @@ function iletisimiKur() {
   }
 
   const telEtiket = sec("[data-telefon-etiket]");
-  if (telEtiket) telEtiket.textContent = ILETISIM.whatsappAktif ? "Telefon / WhatsApp" : "Telefon";
+  if (telEtiket) telEtiket.textContent = ILETISIM.whatsappAktif ? "WhatsApp bilgi hattı" : "Telefon";
 
   const yil = sec("#yil");
   if (yil) yil.textContent = new Date().getFullYear();
