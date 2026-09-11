@@ -11,30 +11,36 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/stil.css">
 </head>
-<body>
+<body data-page="collection">
 
 <!-- ================= ÜST MENÜ ================= -->
 <header class="ust-bar">
   <div class="kapsayici ust-bar-ic">
-    <a href="index.html" class="logo logo--marka logo--yazi" aria-label="Ozkahya Studio ana sayfa">
+    <a href="index.html" class="logo logo--marka logo--yazi" aria-label="Ozkahya Studio ana sayfa" data-i18n-aria-label="homeAria">
       <img src="gorseller/ozkahya-studio-logo.svg" alt="Ozkahya Studio" width="260" height="49">
-      <span class="logo-alt">El Yapımı Gümüş ve Bakır</span>
+      <span class="logo-alt" data-i18n="logoAlt">El Yapımı Gümüş ve Bakır</span>
     </a>
 
-    <button class="menu-dugmesi" aria-label="Menü" aria-expanded="false">
+    <button class="menu-dugmesi" aria-label="Menü" data-i18n-aria-label="menuAria" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
 
     <nav class="menu">
-      <a href="index.html">Ana Sayfa</a>
-      <a href="koleksiyon.html" class="aktif">Koleksiyon</a>
-      <a href="index.html#atolye">Atölye</a>
-      <a href="index.html#bakim">Bakım</a>
-      <a href="index.html#iletisim">İletişim</a>
-      <a href="https://www.shopier.com/ozkahyastudio" target="_blank" rel="noopener">Shopier</a>
+      <a href="index.html" data-i18n="navHome">Ana Sayfa</a>
+      <a href="koleksiyon.html" class="aktif" data-i18n="navCollection">Koleksiyon</a>
+      <a href="index.html#atolye" data-i18n="navWorkshop">Atölye</a>
+      <a href="index.html#bakim" data-i18n="navCare">Bakım</a>
+      <a href="index.html#iletisim" data-i18n="navContact">İletişim</a>
+      <a href="https://www.shopier.com/ozkahyastudio" target="_blank" rel="noopener" data-i18n="navShopier">Shopier</a>
+      <div class="dil-secici" role="group" aria-label="Dil seçimi" data-i18n-aria-label="languageAria">
+        <button type="button" data-dil="tr" aria-pressed="true">TR</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-dil="en" aria-pressed="false">EN</button>
+      </div>
       <!-- WhatsApp logosu js/site.js tarafından eklenir -->
-      <a class="buton buton--simge" data-whatsapp="Merhaba, bir ürün hakkında bilgi almak istiyorum."
-         aria-label="WhatsApp'tan bilgi alın" title="WhatsApp'tan bilgi alın"></a>
+      <a class="buton buton--simge" data-whatsapp-key="waGeneral"
+         aria-label="WhatsApp'tan bilgi alın" data-i18n-aria-label="whatsappInfoAria"
+         title="WhatsApp'tan bilgi alın" data-i18n-title="whatsappInfoAria"></a>
     </nav>
   </div>
 </header>
@@ -43,9 +49,9 @@
 <section class="bolum bolum--ince">
   <div class="kapsayici">
     <div class="bolum-baslik">
-      <p class="ust-etiket">Koleksiyon</p>
-      <h2>Atölyeden çıkan tüm parçalar</h2>
-      <p>
+      <p class="ust-etiket" data-i18n="collectionEyebrow">Koleksiyon</p>
+      <h2 data-i18n="collectionHeading">Atölyeden çıkan tüm parçalar</h2>
+      <p data-i18n="collectionIntro">
         Kategoriye göre süzebilir veya arama yapabilirsiniz. Beğendiğiniz parçaya
         dokunduğunuzda satın alma ve bilgi seçenekleri açılır.
       </p>
@@ -53,7 +59,8 @@
 
     <div class="arama-kutusu">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input type="search" id="arama" placeholder="Ürün ara (örn: ametist)" aria-label="Ürün ara">
+      <input type="search" id="arama" placeholder="Ürün ara (örn: ametist)"
+             data-i18n-placeholder="searchPlaceholder" aria-label="Ürün ara" data-i18n-aria-label="searchAria">
     </div>
 
     <div class="filtreler" id="filtreler"></div>
@@ -68,31 +75,31 @@
 <section class="bolum" style="background:#f6f2ec">
   <div class="kapsayici">
     <div class="bolum-baslik bolum-baslik--orta">
-      <p class="ust-etiket">Nasıl sipariş verilir?</p>
-      <h2>Üç adımda tamamlanır</h2>
-      <p>Sipariş ve ödeme güvenli şekilde Shopier üzerinden tamamlanır.</p>
+      <p class="ust-etiket" data-i18n="orderingEyebrow">Nasıl sipariş verilir?</p>
+      <h2 data-i18n="orderingTitle">Üç adımda tamamlanır</h2>
+      <p data-i18n="orderingText">Sipariş ve ödeme güvenli şekilde Shopier üzerinden tamamlanır.</p>
     </div>
 
     <div class="kartlar">
       <div class="kart">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        <h3>1 · Ürünü seçin</h3>
-        <p>Beğendiğiniz parçanın detayını açıp Shopier'de satın al düğmesine dokunun.</p>
+        <h3 data-i18n="orderStep1">1 · Ürünü seçin</h3>
+        <p data-i18n="orderStep1Text">Beğendiğiniz parçanın detayını açıp Shopier'de satın al düğmesine dokunun.</p>
       </div>
       <div class="kart">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M5 8l7-5 7 5"/></svg>
-        <h3>2 · Shopier'de ödeyin</h3>
-        <p>Sipariş bilgilerinizi girin ve ödemenizi Shopier'in güvenli sayfasında tamamlayın.</p>
+        <h3 data-i18n="orderStep2">2 · Shopier'de ödeyin</h3>
+        <p data-i18n="orderStep2Text">Sipariş bilgilerinizi girin ve ödemenizi Shopier'in güvenli sayfasında tamamlayın.</p>
       </div>
       <div class="kart">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M9 7V4h6v3"/></svg>
-        <h3>3 · Siparişinizi takip edin</h3>
-        <p>Hazırlık, kargo ve sipariş takibi Shopier siparişiniz üzerinden yürütülür.</p>
+        <h3 data-i18n="orderStep3">3 · Siparişinizi takip edin</h3>
+        <p data-i18n="orderStep3Text">Hazırlık, kargo ve sipariş takibi Shopier siparişiniz üzerinden yürütülür.</p>
       </div>
     </div>
 
     <div style="text-align:center;margin-top:36px">
-      <a class="buton" href="https://www.shopier.com/ozkahyastudio" target="_blank" rel="noopener">Shopier mağazasını aç</a>
+      <a class="buton" href="https://www.shopier.com/ozkahyastudio" target="_blank" rel="noopener" data-i18n="openShopier">Shopier mağazasını aç</a>
     </div>
   </div>
 </section>
@@ -102,24 +109,24 @@
   <div class="kapsayici alt-bilgi-ic">
     <div class="logo logo--marka logo--yazi" aria-label="Ozkahya Studio">
       <img src="gorseller/ozkahya-studio-logo.svg" alt="Ozkahya Studio" width="260" height="49">
-      <span class="logo-alt">El Yapımı Gümüş ve Bakır</span>
+      <span class="logo-alt" data-i18n="logoAlt">El Yapımı Gümüş ve Bakır</span>
     </div>
     <nav class="alt-menu">
-      <a href="index.html">Ana Sayfa</a>
-      <a href="index.html#atolye">Atölye</a>
-      <a href="index.html#bakim">Bakım</a>
-      <a href="index.html#iletisim">İletişim</a>
-      <a href="https://www.shopier.com/ozkahyastudio" target="_blank" rel="noopener">Shopier Mağaza</a>
+      <a href="index.html" data-i18n="navHome">Ana Sayfa</a>
+      <a href="index.html#atolye" data-i18n="navWorkshop">Atölye</a>
+      <a href="index.html#bakim" data-i18n="navCare">Bakım</a>
+      <a href="index.html#iletisim" data-i18n="navContact">İletişim</a>
+      <a href="https://www.shopier.com/ozkahyastudio" target="_blank" rel="noopener" data-i18n="navShopierStore">Shopier Mağaza</a>
       <a data-baglanti="instagram" href="#" target="_blank" rel="noopener">Instagram</a>
     </nav>
-    <p class="telif">© <span id="yil"></span> Ozkahya Studio · Tüm parçalar el yapımıdır.</p>
+    <p class="telif">© <span id="yil"></span> <span data-i18n="copyright">Ozkahya Studio · Tüm parçalar el yapımıdır.</span></p>
   </div>
 </footer>
 
 <!-- ================= ÜRÜN PENCERESİ ================= -->
 <div class="pencere" id="urunPenceresi" role="dialog" aria-modal="true" aria-labelledby="pencereAd">
   <div class="pencere-ic">
-    <button class="kapat" aria-label="Kapat">✕</button>
+    <button class="kapat" aria-label="Kapat" data-i18n-aria-label="close">✕</button>
     <div class="pencere-gorsel" id="pencereGorsel"></div>
     <div class="pencere-yazi">
       <p class="ust-etiket" id="pencereKategori"></p>
@@ -129,15 +136,16 @@
       <p class="pencere-detay" id="pencereDetay"></p>
       <p style="font-size:.86rem;color:var(--yazi-soluk)" id="pencereStok"></p>
       <div class="pencere-dugmeler">
-        <a class="buton" id="pencereShopier" href="#" target="_blank" rel="noopener">Shopier'de satın al</a>
-        <a class="buton" id="pencereWhatsapp" href="#" target="_blank" rel="noopener">WhatsApp'tan bilgi al</a>
-        <a class="buton buton--bos" id="pencereEposta" href="#">E-posta ile sor</a>
+        <a class="buton" id="pencereShopier" href="#" target="_blank" rel="noopener" data-i18n="buyShopier">Shopier'de satın al</a>
+        <a class="buton" id="pencereWhatsapp" href="#" target="_blank" rel="noopener"><span data-i18n="whatsappProduct">WhatsApp'tan bilgi al</span></a>
+        <a class="buton buton--bos" id="pencereEposta" href="#" data-i18n="askByEmail">E-posta ile sor</a>
       </div>
     </div>
   </div>
 </div>
 
 <script src="js/urunler.js"></script>
+<script src="js/ceviriler.js"></script>
 <script src="js/site.js"></script>
 </body>
 </html>

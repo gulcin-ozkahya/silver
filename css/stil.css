@@ -178,7 +178,7 @@ p { margin: 0 0 1em; }
   margin-top: 6px;
 }
 
-.menu { display: flex; align-items: center; gap: 32px; }
+.menu { display: flex; align-items: center; gap: clamp(16px, 2vw, 32px); }
 .menu a {
   font-size: 0.88rem;
   letter-spacing: 0.04em;
@@ -204,6 +204,34 @@ p { margin: 0 0 1em; }
 .menu a.buton { color: #fff; }
 .menu a.buton:hover { color: #fff; }
 .menu a.buton::after { display: none; }
+
+.dil-secici {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--cizgi-koyu);
+}
+.dil-secici button {
+  width: 25px;
+  min-height: 30px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--yazi-soluk);
+  font: 400 0.76rem/1 var(--sans);
+  letter-spacing: 0;
+  cursor: pointer;
+  transition: color var(--gecis);
+}
+.dil-secici button:hover,
+.dil-secici button.aktif {
+  color: var(--yazi);
+  font-weight: 500;
+}
+.dil-secici button.aktif {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
 
 .menu-dugmesi {
   display: none;
@@ -723,6 +751,11 @@ p { margin: 0 0 1em; }
   .menu.acik { display: flex; }
   .menu a { padding: 13px 0; border-bottom: 1px solid var(--cizgi); }
   .menu a:last-child { border-bottom: 0; }
+  .menu .dil-secici {
+    justify-content: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--cizgi);
+  }
   .menu .buton { margin-top: 14px; justify-content: center; }
   .menu .buton--simge { margin-left: auto; margin-right: auto; }
 }

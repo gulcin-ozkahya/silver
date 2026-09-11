@@ -11,30 +11,36 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/stil.css">
 </head>
-<body>
+<body data-page="home">
 
 <!-- ================= ÜST MENÜ ================= -->
 <header class="ust-bar">
   <div class="kapsayici ust-bar-ic">
-    <a href="index.html" class="logo logo--marka logo--yazi" aria-label="Ozkahya Studio ana sayfa">
+    <a href="index.html" class="logo logo--marka logo--yazi" aria-label="Ozkahya Studio ana sayfa" data-i18n-aria-label="homeAria">
       <img src="gorseller/ozkahya-studio-logo.svg" alt="Ozkahya Studio" width="260" height="49">
-      <span class="logo-alt">El Yapımı Gümüş ve Bakır</span>
+      <span class="logo-alt" data-i18n="logoAlt">El Yapımı Gümüş ve Bakır</span>
     </a>
 
-    <button class="menu-dugmesi" aria-label="Menü" aria-expanded="false">
+    <button class="menu-dugmesi" aria-label="Menü" data-i18n-aria-label="menuAria" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
 
     <nav class="menu">
-      <a href="index.html" class="aktif">Ana Sayfa</a>
-      <a href="koleksiyon.html">Koleksiyon</a>
-      <a href="#atolye">Atölye</a>
-      <a href="#bakim">Bakım</a>
-      <a href="#iletisim">İletişim</a>
-      <a href="https://www.shopier.com/ozkahyastudio" target="_blank" rel="noopener">Shopier</a>
+      <a href="index.html" class="aktif" data-i18n="navHome">Ana Sayfa</a>
+      <a href="koleksiyon.html" data-i18n="navCollection">Koleksiyon</a>
+      <a href="#atolye" data-i18n="navWorkshop">Atölye</a>
+      <a href="#bakim" data-i18n="navCare">Bakım</a>
+      <a href="#iletisim" data-i18n="navContact">İletişim</a>
+      <a href="https://www.shopier.com/ozkahyastudio" target="_blank" rel="noopener" data-i18n="navShopier">Shopier</a>
+      <div class="dil-secici" role="group" aria-label="Dil seçimi" data-i18n-aria-label="languageAria">
+        <button type="button" data-dil="tr" aria-pressed="true">TR</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-dil="en" aria-pressed="false">EN</button>
+      </div>
       <!-- WhatsApp logosu js/site.js tarafından eklenir -->
-      <a class="buton buton--simge" data-whatsapp="Merhaba, bir ürün hakkında bilgi almak istiyorum."
-         aria-label="WhatsApp'tan bilgi alın" title="WhatsApp'tan bilgi alın"></a>
+      <a class="buton buton--simge" data-whatsapp-key="waGeneral"
+         aria-label="WhatsApp'tan bilgi alın" data-i18n-aria-label="whatsappInfoAria"
+         title="WhatsApp'tan bilgi alın" data-i18n-title="whatsappInfoAria"></a>
     </nav>
   </div>
 </header>
@@ -43,44 +49,44 @@
 <section class="vitrin">
   <div class="kapsayici vitrin-ic">
     <div class="vitrin-metin">
-      <p class="ust-etiket">Gümüş ve Bakır · Tek Tek El İşi</p>
-      <h1>Elde şekillenen<br>sessiz bir zarafet</h1>
-      <p class="vitrin-yazi">
+      <p class="ust-etiket" data-i18n="heroEyebrow">Gümüş ve Bakır · Tek Tek El İşi</p>
+      <h1 data-i18n-html="heroTitle">Elde şekillenen<br>sessiz bir zarafet</h1>
+      <p class="vitrin-yazi" data-i18n="heroText">
         Ozkahya Studio'daki her parça, küçük bir atölyede tek bir çift elden çıkıyor.
         Kalıp yok, seri üretim yok. Sadece gümüş teller, sabır ve zaman.
       </p>
       <div class="vitrin-dugmeler">
-        <a class="buton" href="koleksiyon.html">Koleksiyonu Gör</a>
-        <a class="buton buton--bos" href="#atolye">Atölyeyi Tanı</a>
+        <a class="buton" href="koleksiyon.html" data-i18n="viewCollection">Koleksiyonu Gör</a>
+        <a class="buton buton--bos" href="#atolye" data-i18n="meetWorkshop">Atölyeyi Tanı</a>
       </div>
 
       <div class="vitrin-notlar">
         <span class="vitrin-not">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 6 9 17l-5-5"/></svg>
-          %100 el yapımı
+          <span data-i18n="handmade">%100 el yapımı</span>
         </span>
         <span class="vitrin-not">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 6 9 17l-5-5"/></svg>
-          Gümüş ve bakır tasarımlar
+          <span data-i18n="silverCopper">Gümüş ve bakır tasarımlar</span>
         </span>
         <span class="vitrin-not">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 6 9 17l-5-5"/></svg>
-          Ölçüye özel üretim
+          <span data-i18n="madeToMeasure">Ölçüye özel üretim</span>
         </span>
       </div>
     </div>
 
     <figure class="vitrin-gorsel">
       <div class="vitrin-fotograf">
-        <img src="gorseller/mor-tasli-kolye-takili.jpg" alt="Boyunda mor taşlı, püsküllü gümüş kolye">
+        <img src="gorseller/mor-tasli-kolye-takili.jpg" alt="Boyunda mor taşlı, püsküllü gümüş kolye" data-i18n-alt="heroImageAlt">
       </div>
       <figcaption class="vitrin-kunye">
         <span class="vitrin-sira">01</span>
         <span>
-          <small>Atölyeden seçki</small>
-          <strong>Mor taşlı gümüş kolye</strong>
+          <small data-i18n="workshopSelection">Atölyeden seçki</small>
+          <strong data-i18n="purpleStoneNecklace">Mor taşlı gümüş kolye</strong>
         </span>
-        <span class="vitrin-malzeme">Gümüş · El işi</span>
+        <span class="vitrin-malzeme" data-i18n="silverHandmade">Gümüş · El işi</span>
       </figcaption>
     </figure>
   </div>
@@ -90,14 +96,14 @@
 <section class="bolum" id="oneCikan">
   <div class="kapsayici">
     <div class="bolum-baslik">
-      <p class="ust-etiket">Seçilmiş Parçalar</p>
-      <h2>Öne çıkanlar</h2>
+      <p class="ust-etiket" data-i18n="selectedPieces">Seçilmiş Parçalar</p>
+      <h2 data-i18n="featured">Öne çıkanlar</h2>
     </div>
 
     <div class="izgara" id="oneCikanlar"></div>
 
     <div style="margin-top:36px">
-      <a class="buton buton--bos" href="koleksiyon.html">Tüm koleksiyonu gör →</a>
+      <a class="buton buton--bos" href="koleksiyon.html" data-i18n="viewAll">Tüm koleksiyonu gör →</a>
     </div>
   </div>
 </section>
@@ -105,21 +111,21 @@
 <!-- ================= ATÖLYE / HAKKINDA ================= -->
 <section class="bolum hakkinda" id="atolye">
   <div class="kapsayici hakkinda-ic">
-    <div class="hakkinda-gorsel" aria-label="Elde örülmüş gümüş bileklikler ve tel detayları">
+    <div class="hakkinda-gorsel" aria-label="Elde örülmüş gümüş bileklikler ve tel detayları" data-i18n-aria-label="workshopVisualAria">
       <figure class="atolye-fotograf atolye-fotograf--ana">
-        <img src="gorseller/genis-orgu-bileklik-tam.jpg" alt="Geniş örgülü gümüş bilekliğin tamamı ve silindir kapaması">
-        <figcaption>Tel tel, elde örülür</figcaption>
+        <img src="gorseller/genis-orgu-bileklik-tam.jpg" alt="Geniş örgülü gümüş bilekliğin tamamı ve silindir kapaması" data-i18n-alt="wideBraceletAlt">
+        <figcaption data-i18n="wovenByHand">Tel tel, elde örülür</figcaption>
       </figure>
       <figure class="atolye-fotograf atolye-fotograf--detay">
-        <img src="gorseller/orgu-bileklik-yeni-detay.jpg" alt="Gümüş tel örgünün yakın plan detayı">
+        <img src="gorseller/orgu-bileklik-yeni-detay.jpg" alt="Gümüş tel örgünün yakın plan detayı" data-i18n-alt="wovenDetailAlt">
       </figure>
       <span class="atolye-isaret" aria-hidden="true">01 — 03</span>
     </div>
 
     <div>
-      <p class="ust-etiket">Atölye</p>
-      <h2>Bir masa, incecik teller, çok fazla sabır</h2>
-      <p>
+      <p class="ust-etiket" data-i18n="navWorkshop">Atölye</p>
+      <h2 data-i18n="workshopTitle">Bir masa, incecik teller, çok fazla sabır</h2>
+      <p data-i18n="workshopText">
         Ozkahya Studio, İzmir'de bir ev atölyesinde kuruldu. Her tasarım kağıt üzerinde bir
         çizim olarak başlıyor. Sonra gümüş ve bakır teller elde bükülüyor, örülüyor, lehimleniyor
         ve tek tek parlatılıyor. Bu yüzden hiçbir parça diğerinin tam kopyası değil.
@@ -130,22 +136,22 @@
         <div class="adim">
           <span class="adim-no">1</span>
           <div>
-            <h3>Tasarım</h3>
-            <p>Fikir önce eskiz defterinde şekil alır, ölçüleri belirlenir.</p>
+            <h3 data-i18n="design">Tasarım</h3>
+            <p data-i18n="designText">Fikir önce eskiz defterinde şekil alır, ölçüleri belirlenir.</p>
           </div>
         </div>
         <div class="adim">
           <span class="adim-no">2</span>
           <div>
-            <h3>Şekillendirme</h3>
-            <p>Gümüş ve bakır teller tek tek kesilir, elde bükülerek form verilir ve lehimlenir.</p>
+            <h3 data-i18n="shaping">Şekillendirme</h3>
+            <p data-i18n="shapingText">Gümüş ve bakır teller tek tek kesilir, elde bükülerek form verilir ve lehimlenir.</p>
           </div>
         </div>
         <div class="adim">
           <span class="adim-no">3</span>
           <div>
-            <h3>Bitirme</h3>
-            <p>Zımparalama, parlatma ve varsa doğal taşın yuvasına oturtulması.</p>
+            <h3 data-i18n="finishing">Bitirme</h3>
+            <p data-i18n="finishingText">Zımparalama, parlatma ve varsa doğal taşın yuvasına oturtulması.</p>
           </div>
         </div>
       </div>
@@ -157,26 +163,26 @@
 <section class="bolum" id="bakim">
   <div class="kapsayici">
     <div class="bolum-baslik bolum-baslik--orta">
-      <p class="ust-etiket">Takı Bakımı</p>
-      <h2>Uzun yıllar ilk günkü gibi</h2>
-      <p>Gümüş ve bakır yaşayan metallerdir. Birkaç küçük alışkanlık parlaklığını korur.</p>
+      <p class="ust-etiket" data-i18n="jewelryCare">Takı Bakımı</p>
+      <h2 data-i18n="careTitle">Uzun yıllar ilk günkü gibi</h2>
+      <p data-i18n="careText">Gümüş ve bakır yaşayan metallerdir. Birkaç küçük alışkanlık parlaklığını korur.</p>
     </div>
 
     <div class="kartlar">
       <div class="kart">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3s7 6 7 11a7 7 0 0 1-14 0c0-5 7-11 7-11z"/></svg>
-        <h3>Sudan uzak tutun</h3>
-        <p>Duş, deniz ve havuzdan önce çıkarın. Parfüm ve krem sonrası takın.</p>
+        <h3 data-i18n="avoidWater">Sudan uzak tutun</h3>
+        <p data-i18n="avoidWaterText">Duş, deniz ve havuzdan önce çıkarın. Parfüm ve krem sonrası takın.</p>
       </div>
       <div class="kart">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg>
-        <h3>Kutusunda saklayın</h3>
-        <p>Havayla teması azalttığı için kapalı kutu veya kilitli poşet en iyisidir.</p>
+        <h3 data-i18n="storeSafely">Kutusunda saklayın</h3>
+        <p data-i18n="storeSafelyText">Havayla teması azalttığı için kapalı kutu veya kilitli poşet en iyisidir.</p>
       </div>
       <div class="kart">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20 20 4"/><path d="M14 4h6v6"/></svg>
-        <h3>Yumuşak bezle silin</h3>
-        <p>Kararma olursa kuru mikrofiber bez yeter. Sert kimyasal kullanmayın.</p>
+        <h3 data-i18n="softCloth">Yumuşak bezle silin</h3>
+        <p data-i18n="softClothText">Kararma olursa kuru mikrofiber bez yeter. Sert kimyasal kullanmayın.</p>
       </div>
     </div>
   </div>
@@ -186,9 +192,9 @@
 <section class="bolum" id="iletisim" style="background:#f6f2ec">
   <div class="kapsayici iletisim-ic">
     <div>
-      <p class="ust-etiket">İletişim</p>
-      <h2>Bir parça mı beğendiniz?</h2>
-      <p>
+      <p class="ust-etiket" data-i18n="navContact">İletişim</p>
+      <h2 data-i18n="contactTitle">Bir parça mı beğendiniz?</h2>
+      <p data-i18n="contactText">
         Satıştaki ürünlerin sipariş ve ödeme işlemleri yalnızca Shopier üzerinden
         tamamlanır. WhatsApp'ı ürünler, ölçüler ve farklı taş seçenekleri hakkında
         bilgi almak için kullanabilirsiniz.
@@ -201,7 +207,7 @@
         </a>
         <a class="iletisim-satir" data-baglanti="eposta" href="#">
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
-          <span><small>E-posta</small><span data-iletisim="eposta"></span></span>
+          <span><small data-i18n="email">E-posta</small><span data-iletisim="eposta"></span></span>
         </a>
         <a class="iletisim-satir" data-baglanti="instagram" href="#" target="_blank" rel="noopener">
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
@@ -215,15 +221,15 @@
     </div>
 
     <div class="bilgi-kutusu">
-      <h3>Özel sipariş</h3>
-      <p>
+      <h3 data-i18n="customOrder">Özel sipariş</h3>
+      <p data-i18n="customOrderText">
         Aklınızda bir tasarım mı var? Nişan hediyesi, isim harfi, doğum taşı ya da
         eski bir parçanın yeniden yapımı olabilir. Fotoğrafını gönderin, birlikte
         çalışalım. Üretim genellikle 1–2 hafta sürüyor. Sipariş hazır olduğunda
         size özel Shopier ilanı açılır; ödeme yalnızca Shopier'den alınır.
       </p>
-      <a class="buton" data-whatsapp="Merhaba, özel sipariş hakkında bilgi almak istiyorum.">WhatsApp'tan bilgi alın</a>
-      <a class="buton buton--bos" data-baglanti="eposta" href="#" style="width:100%;justify-content:center;margin-top:10px">E-posta gönderin</a>
+      <a class="buton" data-whatsapp-key="waCustom"><span data-i18n="whatsappInfo">WhatsApp'tan bilgi alın</span></a>
+      <a class="buton buton--bos" data-baglanti="eposta" href="#" style="width:100%;justify-content:center;margin-top:10px" data-i18n="sendEmail">E-posta gönderin</a>
     </div>
   </div>
 </section>
@@ -233,24 +239,24 @@
   <div class="kapsayici alt-bilgi-ic">
     <div class="logo logo--marka logo--yazi" aria-label="Ozkahya Studio">
       <img src="gorseller/ozkahya-studio-logo.svg" alt="Ozkahya Studio" width="260" height="49">
-      <span class="logo-alt">El Yapımı Gümüş ve Bakır</span>
+      <span class="logo-alt" data-i18n="logoAlt">El Yapımı Gümüş ve Bakır</span>
     </div>
     <nav class="alt-menu">
-      <a href="koleksiyon.html">Koleksiyon</a>
-      <a href="#atolye">Atölye</a>
-      <a href="#bakim">Bakım</a>
-      <a href="#iletisim">İletişim</a>
-      <a href="https://www.shopier.com/ozkahyastudio" target="_blank" rel="noopener">Shopier Mağaza</a>
+      <a href="koleksiyon.html" data-i18n="navCollection">Koleksiyon</a>
+      <a href="#atolye" data-i18n="navWorkshop">Atölye</a>
+      <a href="#bakim" data-i18n="navCare">Bakım</a>
+      <a href="#iletisim" data-i18n="navContact">İletişim</a>
+      <a href="https://www.shopier.com/ozkahyastudio" target="_blank" rel="noopener" data-i18n="navShopierStore">Shopier Mağaza</a>
       <a data-baglanti="instagram" href="#" target="_blank" rel="noopener">Instagram</a>
     </nav>
-    <p class="telif">© <span id="yil"></span> Ozkahya Studio · Tüm parçalar el yapımıdır.</p>
+    <p class="telif">© <span id="yil"></span> <span data-i18n="copyright">Ozkahya Studio · Tüm parçalar el yapımıdır.</span></p>
   </div>
 </footer>
 
 <!-- ================= ÜRÜN PENCERESİ ================= -->
 <div class="pencere" id="urunPenceresi" role="dialog" aria-modal="true" aria-labelledby="pencereAd">
   <div class="pencere-ic">
-    <button class="kapat" aria-label="Kapat">✕</button>
+    <button class="kapat" aria-label="Kapat" data-i18n-aria-label="close">✕</button>
     <div class="pencere-gorsel" id="pencereGorsel"></div>
     <div class="pencere-yazi">
       <p class="ust-etiket" id="pencereKategori"></p>
@@ -260,15 +266,16 @@
       <p class="pencere-detay" id="pencereDetay"></p>
       <p style="font-size:.86rem;color:var(--yazi-soluk)" id="pencereStok"></p>
       <div class="pencere-dugmeler">
-        <a class="buton" id="pencereShopier" href="#" target="_blank" rel="noopener">Shopier'de satın al</a>
-        <a class="buton" id="pencereWhatsapp" href="#" target="_blank" rel="noopener">WhatsApp'tan bilgi al</a>
-        <a class="buton buton--bos" id="pencereEposta" href="#">E-posta ile sor</a>
+        <a class="buton" id="pencereShopier" href="#" target="_blank" rel="noopener" data-i18n="buyShopier">Shopier'de satın al</a>
+        <a class="buton" id="pencereWhatsapp" href="#" target="_blank" rel="noopener"><span data-i18n="whatsappProduct">WhatsApp'tan bilgi al</span></a>
+        <a class="buton buton--bos" id="pencereEposta" href="#" data-i18n="askByEmail">E-posta ile sor</a>
       </div>
     </div>
   </div>
 </div>
 
 <script src="js/urunler.js"></script>
+<script src="js/ceviriler.js"></script>
 <script src="js/site.js"></script>
 </body>
 </html>
